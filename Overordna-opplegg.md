@@ -19,9 +19,9 @@
 ## Hvordan er hver sesjon strukturert?
 
 1. Dersom nødvendig, en felles presentasjon/intro til temaet hvor vi sier noe om:
-  - Hva vi skal gjøre
-  - Hvorfor vi skal gjøre det
-  - Ting man må vite
-2. Interaktiv sesjon hvor vi deler opp i 4 grupper som sitter i hvert sitt breakout-rom. Der kan deltagerne spørre hverandre om hjelp, dele skjerm osv. Vi fordeler oss utover i de 4 breaout-rommene som fasilitator.
-3. En kort recap (5 min) på slutten av hver del.
+  a. Hva vi skal gjøre
+  b. Hvorfor vi skal gjøre det
+  c. Ting man må vite
+2. Interaktiv sesjon hvor vi deler opp i 4 grupper som sitter i hvert sitt breakout-rom. Der kan deltagerne spørre hverandre om hjelp, dele skjerm osv. Vi fordeler oss utover i de 4 breaout-rommene som fasilitatorer.
+3. En kort recap i fellesskap (5 min) på slutten av hver del.
 
