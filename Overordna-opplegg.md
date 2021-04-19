@@ -4,8 +4,8 @@
 - 10:00 - 11:00 Presentasjon om Saga, GCP, de mest brukte tjenestene, typiske kostnadsdrivere m.m.
 - 11:00 - 11:45 Lunsj
 - 11:45 - 12:45 Sesjon 1: Data ingest
-  - Grunnleggende innføring i hvordan få data inn i GCS og BigQuery
-  - Vi bruker Apache Beam/Dataflow til å fordøye og importere større mengder data
+    - Grunnleggende innføring i hvordan få data inn i GCS og BigQuery
+    - Vi bruker Apache Beam/Dataflow til å fordøye og importere større mengder data
 - 12:50 - 13:00 Pause
 - 13:00 - 13:50 Sesjon 2: BigQuery
 - 13:50 - 14:00 Pause
@@ -19,9 +19,9 @@
 ## Hvordan er hver sesjon strukturert?
 
 1. Dersom nødvendig, en felles presentasjon/intro (5-10 min) til temaet hvor vi sier noe om:
-  - Hva vi skal gjøre
-  - Hvorfor vi skal gjøre det
-  - Ting man må vite
+    - Hva vi skal gjøre
+    - Hvorfor vi skal gjøre det
+    - Ting man må vite
 
 2. Interaktiv sesjon hvor vi deler opp i 4 grupper som sitter i hvert sitt breakout-rom. Der kan deltagerne spørre hverandre om hjelp, dele skjerm osv. Vi fordeler oss utover i de 4 breaout-rommene som fasilitatorer.
 3. En kort recap i fellesskap (5 min) på slutten av hver del.
