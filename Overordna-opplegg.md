@@ -18,7 +18,7 @@
 
 ## Hvordan er hver sesjon strukturert?
 
-1. Dersom nødvendig, en felles presentasjon/intro til temaet hvor vi sier noe om:
+1. Dersom nødvendig, en felles presentasjon/intro (5-10 min) til temaet hvor vi sier noe om:
   - Hva vi skal gjøre
   - Hvorfor vi skal gjøre det
   - Ting man må vite
