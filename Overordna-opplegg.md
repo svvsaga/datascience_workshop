@@ -11,7 +11,7 @@
 - 13:50 - 14:00 Pause
 - 14:00 - 14:50 Sesjon 3: Mer analyse - Intro til DBT og FME
 - 14:50 - 15:00 Pause
-- 15:00 - 15:50 Sesjon 4: Visualisering og litt demos
+- 15:00 - 15:50 Sesjon 4: Visualisering (og kanskje litt demos)
 - 15:50 - 16:00 Tilbakemelding og neste steg
   - Hvordan var workshoppen?
   - Hva annet/mer trenger deltagerne for å komme i gang?
