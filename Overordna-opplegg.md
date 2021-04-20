@@ -4,6 +4,10 @@
 - Vi burde ta høyde for at noen kan "hoppe inn igjen" i workshop dersom de må være borte en time
   - F.eks. kan vi ha dataene man skal jobbe med i en gitt sesjon tilgjengelig utenfor deres personlige prosjekter
 
+## Andre oppgaver i forkant
+- Sende ut agenda (senest ila. fredag)
+- Sende ut liste med ting som deltakerne må ordne på forhånd (senest ila. onsdag)
+
 ## Overordnet workshop-opplegg
 
 - 10:00 - 10:30 Presentasjon om Saga, GCP, de mest brukte tjenestene, typiske kostnadsdrivere m.m.
