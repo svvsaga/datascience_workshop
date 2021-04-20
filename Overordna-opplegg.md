@@ -1,3 +1,6 @@
+## TODO
+
+- Vi må avklare hvilke agendapunkter som kan være buffere som vi kan sløyfe dersom vi går over tida, uten at dette ødelegger for neste sesjon.
 
 ## Overordnet workshop-opplegg
 
