@@ -1,6 +1,8 @@
 ## TODO
 
 - Vi må avklare hvilke agendapunkter som kan være buffere som vi kan sløyfe dersom vi går over tida, uten at dette ødelegger for neste sesjon.
+- Vi burde ta høyde for at noen kan "hoppe inn igjen" i workshop dersom de må være borte en time
+  - F.eks. kan vi ha dataene man skal jobbe med i en gitt sesjon tilgjengelig utenfor deres personlige prosjekter
 
 ## Overordnet workshop-opplegg
 
