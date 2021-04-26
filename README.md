@@ -24,7 +24,7 @@ Denne workshopen benytter seg såkalte [Jupyter Notebooks](https://jupyter.org/)
     - [Notebook](./workshop_sesjon1.ipynb) ([Åpne direkte i Colab](https://colab.research.google.com/github/svvsaga/datascience_workshop/blob/main/workshop_sesjon1.ipynb))
 3. Sesjon 2: "Transform" - Intro til DBT og FME
     - Intro?
-    - Notebook
+    - [Materiale](./workshop_sesjon2_material/)
 4. Sesjon 3: Utforsking og analyse med BigQuery
     - Intro?
     - [Notebook](./workshop_sesjon3.ipynb)
