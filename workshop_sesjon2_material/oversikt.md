@@ -11,9 +11,9 @@ I denne sesjonen skal vi øve oss på kobling mellom FME og BigQuery/Google clou
 Innhold til disse breskreves under:
 
 ## 1) bq_write_oppgave.fmwt
-- ingest av en øffentlig fil om kommunegeografier fra github: https://github.com/smistad/konverter-norgeskart-projeksjon/releases/download/v2020/kommuner_komprimert.json 
+- ingest av en GeoJSON fil som inneholder kommunegeografier, publisert av [kartverket.no](https://github.com/smistad/konverter-norgeskart-projeksjon/releases/download/v2020/kommuner_komprimert.json)
 - opplasting til GCS bøtte ved bruk av FME's GoogleCloudStorageConnector 
-- opplasting til BigQuery ved bruk av FME's GoogleBigQueryWriter
+- opplasting til BigQuery ved bruk av FME's GoogleBigQueryWriter 
 
 ## 2) bq_read_oppgave.fmwt
 - Kjør en BigQuery spørring ved bruk av FME's GoogleBigQueryConnector
