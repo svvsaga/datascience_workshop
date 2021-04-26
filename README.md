@@ -27,7 +27,7 @@ Denne workshopen benytter seg såkalte [Jupyter Notebooks](https://jupyter.org/)
     - Notebook
 4. Sesjon 3: Utforsking og analyse med BigQuery
     - Intro?
-    - [Notebook](./workshop_sesjon2.ipynb)
+    - [Notebook](./workshop_sesjon3.ipynb)
 5. Sesjon 4: Visualisering med Data Studio og GeoViz
 6. Oppsummering og tilbakemelding
 
