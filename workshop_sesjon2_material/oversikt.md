@@ -1,7 +1,7 @@
 # Oversikt sesjon 2 - ETL med FME og Google Cloud
 
 ## Generelt
-I denne sesjonen skal vi øve oss på kobling mellom FME og BigQuery og lage noen enkle ETL workflows. 
+I denne sesjonen skal vi øve oss på kobling mellom FME og BigQuery/Google cloud storage og lage noen enkle ETL workflows. 
 - For å gjøre det enkelt å komme i gang inneholder alle oppgavene en fasit. 
 - Gjerne prøv å lage en løsning fra scratch dersom du er allerede kjent med FME!
 - I hvert fall kreves det endringer i noen brukerparameter (som f.eks. autentisering mot Google Cloud, navn til BigQuery datasett, etc.)
