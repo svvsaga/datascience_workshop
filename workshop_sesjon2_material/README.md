@@ -8,7 +8,7 @@ I denne sesjonen skal vi øve oss på kobling mellom FME og BigQuery/Google clou
 - Oppgave 1) og 2) dekker oppsett av grunnlegende workflows som skriving og lesing fra BigQuery og Google Cloud Storage.
 - Gjerne se også på eksempler 3) og 4) som viser noen kompleksere workflows
 
-Innhold til workflow (.fmw) og template filene (.fmwt) beskrives under:
+Workflow (.fmw) og template filene (.fmwt) i denne mappen kan åpnes med FME workbench. Innhold beskrives under:
 
 ## 1) bq_write_oppgave.fmwt
 - ingest av en GeoJSON fil som inneholder kommunegeografier, publisert av [kartverket.no](https://github.com/smistad/konverter-norgeskart-projeksjon/releases/download/v2020/kommuner_komprimert.json)
@@ -26,5 +26,5 @@ Innhold til workflow (.fmw) og template filene (.fmwt) beskrives under:
 
 ## 4) NVDBapi_kommune.fmw
 - Henting av kommunegeografier fra NVDB API (HTTPCaller)
-- Diverse formaterings- og ekstraksjonsstegene 
+- Diverse formaterings- og ekstraksjonssteg
 - Opplasting til BigQuery gjennom GoogleBigQueryWriter
