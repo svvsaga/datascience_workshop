@@ -10,7 +10,7 @@ I denne sesjonen skal vi øve oss på kobling mellom FME og BigQuery/Google clou
 
 Workflow (.fmw) og template filene (.fmwt) i denne mappen kan åpnes med FME workbench.
 
-Dersom filene åpnes med en egegn FME installasjon/trial versjon utenfor ArcGIS interoperability extension kreves det ev. en endring på python interpreter compatibility til en python versjon som følger med standard FME:
+Dersom filene åpnes med en egen FME installasjon/trial versjon utenfor ArcGIS interoperability extension kreves det ev. en endring på python interpreter compatibility til en python versjon som følger med standard FME:
 
 `Workspace Parameters -> Scripting -> Python Compatibility -> Edit Parameter value`
 
