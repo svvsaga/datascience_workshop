@@ -1,6 +1,7 @@
 # Workshop for datavitere i SVV
 
 Dette kodelageret inneholder undervisningsmateriale for en workshop for datavitere i regi av Saga.
+Kortlenke til dette repoet: www.tinyurl.com/saga-workshop
 
 ## Læringsmål:
 - Laste opp egne datasett til GCS og BigQuery
