@@ -19,7 +19,7 @@ Denne workshopen benytter seg såkalte [Jupyter Notebooks](https://jupyter.org/)
 
 **TODO:** Sørge for at alle punkta under her er lenker til det faktiske innhaldet
 
-1. Introduksjon ([PDF](./Workshop - intro til GCP.pdf))
+1. Introduksjon ([PDF](./Workshop%20-%20intro%20til%20GCP.pdf))
 2. Sesjon 1: "Extract and load" med GCS og BigQuery
     - Intro
     - [Notebook](./workshop_sesjon1.ipynb) ([Åpne direkte i Colab](https://colab.research.google.com/github/svvsaga/datascience_workshop/blob/main/workshop_sesjon1.ipynb))
