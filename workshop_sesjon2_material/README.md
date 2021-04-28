@@ -18,7 +18,7 @@ Dersom filene åpnes med en egen FME installasjon/trial versjon utenfor ArcGIS i
 ![Workflows](FME.png)
 
 ## 1) bq_write_oppgave.fmwt
-- ingest av en GeoJSON fil som inneholder kommunegeografier, publisert av [kartverket.no](https://github.com/smistad/konverter-norgeskart-projeksjon/releases/download/v2020/kommuner_komprimert.json)
+- ingest av en GeoJSON fil som inneholder kommunegeografier, publisert av [kartverket.no](https://github.com/smistad/konverter-norgeskart-projeksjon/releases/)
 - opplasting til GCS bøtte ved bruk av FME's GoogleCloudStorageConnector 
 - opplasting til BigQuery ved bruk av FME's GoogleBigQueryWriter 
 
