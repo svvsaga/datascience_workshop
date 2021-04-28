@@ -31,7 +31,7 @@ Dersom filene åpnes med en egen FME installasjon/trial versjon utenfor ArcGIS i
 - Pivot Transformasjon av resultatene gjennom FME's AttributePivoter
 - Lagring av transformerte resultatene til en BigQuery tabell (GoogleBigQueryWriter)
 
-## 4) NVDBapi_kommune.fmw
+## 4) NVDBapi_kommune.fmwt
 - Henting av kommunegeografier fra NVDB API (HTTPCaller)
 - Diverse formaterings- og ekstraksjonssteg
 - Opplasting til BigQuery gjennom GoogleBigQueryWriter
