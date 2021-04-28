@@ -25,6 +25,6 @@ Denne workshopen benytter seg såkalte [Jupyter Notebooks](https://jupyter.org/)
 4. Sesjon 3: Utforsking og analyse med BigQuery
     - [Notebook](./workshop_sesjon3.ipynb) ([Åpne direkte i Colab](https://colab.research.google.com/github/svvsaga/datascience_workshop/blob/main/workshop_sesjon3.ipynb))
 5. Sesjon 4: Visualisering med Data Studio og GeoViz
-    - [Notebook](./Dataviter_WS_del_4.ipynb) ([Åpne direkte i Colab](https://colab.research.google.com/github/svvsaga/datascience_workshop/blob/main/Dataviter_WS_del_4.ipynb))
+    - [Notebook](./workshop_sesjon4.ipynb) ([Åpne direkte i Colab](https://colab.research.google.com/github/svvsaga/datascience_workshop/blob/main/workshop_sesjon4.ipynb))
 7. Oppsummering og tilbakemelding
 
