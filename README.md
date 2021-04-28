@@ -19,7 +19,7 @@ Denne workshopen benytter seg såkalte [Jupyter Notebooks](https://jupyter.org/)
 
 **TODO:** Sørge for at alle punkta under her er lenker til det faktiske innhaldet
 
-1. Introduksjon til Saga og GCP (powerpoint)
+1. Introduksjon ([PDF](./Workshop - intro til GCP.pdf))
 2. Sesjon 1: "Extract and load" med GCS og BigQuery
     - Intro
     - [Notebook](./workshop_sesjon1.ipynb) ([Åpne direkte i Colab](https://colab.research.google.com/github/svvsaga/datascience_workshop/blob/main/workshop_sesjon1.ipynb))
@@ -34,12 +34,3 @@ Denne workshopen benytter seg såkalte [Jupyter Notebooks](https://jupyter.org/)
     - [Notebook](./Dataviter_WS_del_4.ipynb) ([Åpne direkte i Colab](https://colab.research.google.com/github/svvsaga/datascience_workshop/blob/main/Dataviter_WS_del_4.ipynb))
 7. Oppsummering og tilbakemelding
 
-## TODO
-
-- Sende ut agenda (senest ila. fredag)
-- Sende ut liste med ting som deltakerne må ordne på forhånd (senest ila. onsdag)
-- Vi må avklare hvilke agendapunkter som kan være buffere som vi kan sløyfe dersom vi går over tida, uten at dette ødelegger for neste sesjon.
-- Vi burde ta høyde for at noen kan "hoppe inn igjen" i workshop dersom de må være borte en time
-  - F.eks. kan vi ha dataene man skal jobbe med i en gitt sesjon tilgjengelig utenfor deres personlige prosjekter
-- Vi må bli enige om hvem som skal holde hvilke presentasjoner og hvem som skal lede ordet i ulike deler av agenda
-- 
