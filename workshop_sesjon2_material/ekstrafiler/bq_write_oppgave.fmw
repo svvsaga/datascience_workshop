@@ -1,0 +1,1013 @@
+#! <?xml version="1.0" encoding="UTF-8" ?>
+#! <WORKSPACE
+#    Command-line to run this workspace:
+#        "C:\Program Files\FME\fme.exe" C:\Users\pedlan\Documents\Workshop\Oppdatert\bq_write_oppgave.fmw
+#              --BigQuery_connection ""
+#              --BigQuery_project ""
+#              --BigQuery_dataset "workshop"
+#              --BigQuery_table "kommune"
+#              --Source_URL "https://github.com/smistad/konverter-norgeskart-projeksjon/releases/download/v2020/kommuner_komprimert.json"
+#              --GCS_connector ""
+#              --Lokal_GeoJSON_fil ""
+#              --GCS_bucket ""
+#    
+#!   ARCGIS_COMPATIBILITY="ARCGISPRO"
+#!   ATTR_TYPE_ENCODING="SDF"
+#!   BEGIN_PYTHON=""
+#!   BEGIN_TCL=""
+#!   CATEGORY="Attributes"
+#!   DESCRIPTION=""
+#!   DESTINATION="NONE"
+#!   DESTINATION_ROUTING_FILE=""
+#!   DOC_EXTENTS="4809.17 2786.1"
+#!   DOC_TOP_LEFT="-2520.08 -1229.56"
+#!   END_PYTHON=""
+#!   END_TCL=""
+#!   EXPLICIT_BOOKMARK_ORDER="false"
+#!   FME_BUILD_NUM="21313"
+#!   FME_DOCUMENT_GUID="5389f938-96db-4c7f-8d22-d367c8c743e6"
+#!   FME_DOCUMENT_PRIORGUID="4143a6d8-4089-4915-b04f-a55f2c07d122,e3ac0c07-32e9-4be9-a60e-bb7d54204bba,7b78faee-c0b3-4fed-9be3-1d9e5bcc9de1,03cfdbe1-1c17-4b42-82c3-5d0068494ad7,b00d60fa-e9e9-407a-9226-5a47610ee7c3,e4edb9de-5b82-4e31-a8e9-6340a4d240cc,d71c694d-3f6b-4aa9-b68e-28cd2d323731,976d96d0-697c-4882-a354-d2e898ac0ba9,3ef91e47-6e68-4f03-9ea3-d9bfe350f3ce,a7f6bd16-1d4d-42a9-9598-ab26a530b0c8,c21d7c85-ad7a-4c30-9b40-2ca34532171e,9f6e401a-0afb-4500-8210-559dd2b78185,1e0d5657-e186-48f6-94c9-8c3ac2043256,8e175533-73c7-4621-bd4a-d75a2a20d380,67376669-39c4-411a-b8a9-68e2db2efd6c,ad353ab1-4735-48f8-9ed3-5b59c3262618,600e7827-589c-43f2-ade9-4a3200a8d80d,1c4d5440-589f-494f-9e97-e47a8d4a8f81,c2a0a388-1d21-4de6-b2f7-e63f4050f93c,989896ee-1519-4e44-b778-26985585aea4,02ee2f8f-494b-4e1a-8474-7c5e61a56482,f27a899a-cd3f-4d58-a78e-4b721456a3b0,fbf0d381-92ee-4cf1-b4ec-85d00f44e6cb,547ba8c3-38a0-4da5-b863-99cea958a5a6,b8c3b7f8-f4f9-475d-b6b8-beb36c19e1d4,0da676d2-d2ec-43bf-b136-48a5ccb9f349,76f43136-55bd-4d60-8dda-7c65cafe60b1,1053ee87-c439-4d2d-bdc5-093b3ef88085,bc854cf8-deee-4a04-a638-1c10b47fe304,755f120b-ded9-4b86-b072-83f648049b35,1a12db71-bba3-4927-a2b8-9916298a24bc,b0ba921b-a2bd-4ed5-9690-2e764bb4bf54,7bef6ac8-f9d2-45c4-8653-87992e2d5e2e,e15acae7-6aee-43ea-9329-cc0cb855bbcd"
+#!   FME_GEOMETRY_HANDLING="Enhanced"
+#!   FME_IMPLICIT_CSMAP_REPROJECTION_MODE="Auto"
+#!   FME_NAMES_ENCODING="windows-1252"
+#!   FME_REPROJECTION_ENGINE="ESRI"
+#!   FME_SERVER_SERVICES=""
+#!   FME_STROKE_MAX_DEVIATION="0"
+#!   HISTORY=""
+#!   IGNORE_READER_FAILURE="No"
+#!   LAST_SAVE_BUILD="FME(R) 2021.0.1.0 (20210404 - Build 21313 - WIN64)"
+#!   LAST_SAVE_DATE="2021-04-28T12:51:40"
+#!   LOG_FILE=""
+#!   LOG_MAX_RECORDED_FEATURES="200"
+#!   MARKDOWN_DESCRIPTION=""
+#!   MARKDOWN_USAGE=""
+#!   MAX_LOG_FEATURES="200"
+#!   MULTI_WRITER_DATASET_ORDER="BY_ID"
+#!   PASSWORD=""
+#!   PYTHON_COMPATIBILITY="ArcGISPro27"
+#!   REDIRECT_TERMINATORS="NONE"
+#!   SAVE_ON_PROMPT_AND_RUN="Yes"
+#!   SHOW_ANNOTATIONS="true"
+#!   SHOW_INFO_NODES="true"
+#!   SOURCE="NONE"
+#!   SOURCE_ROUTING_FILE=""
+#!   TERMINATE_REJECTED="YES"
+#!   TITLE="bq_write"
+#!   USAGE=""
+#!   USE_MARKDOWN="NO"
+#!   VIEW_POSITION="-2945.57 1680.09"
+#!   WARN_INVALID_XFORM_PARAM="Yes"
+#!   WORKSPACE_VERSION="1"
+#!   ZOOM_SCALE="101"
+#! >
+#! <DATASETS>
+#! <DATASET
+#!   IS_SOURCE="true"
+#!   ROLE="READER"
+#!   FORMAT="GEOJSON"
+#!   DATASET="$(Source_URL)"
+#!   KEYWORD="GEOJSON_1"
+#!   MULTI_GEOM_ALLOWED="false"
+#!   ATTR_MAX_LENGTH="0"
+#!   ATTR_CASE="ANY"
+#!   ALLOWED_FEAT_TYPES=""
+#!   WRITE_DEFS="true"
+#!   DEFLINE_TEMPLATE=""
+#!   DEFLINE_ATTRS="true"
+#!   EXPOSABLE_ATTRS="fme_basename string fme_color string fme_dataset string fme_feature_type string fme_fill_color string fme_geometry string fme_primary_axis float fme_rotation float fme_secondary_axis float fme_start_angle float fme_sweep_angle float fme_text_size float fme_text_string string fme_type string multi_reader_full_id int multi_reader_id int multi_reader_keyword string multi_reader_type string"
+#!   DEFLINE_PARMS=""
+#!   ATTR_INDEX_TYPES=""
+#!   ATTR_NAME_INVALID_CHARS=""
+#!   SUPPORTS_FEATURE_TYPE_FANOUT="true"
+#!   ENABLED="true"
+#!   DYNAMIC_FEATURE_TYPES_LIST_ON_MERGE="true"
+#!   DATASET_TYPE="FILE"
+#!   FTTR_TYPE="LISTBOX_ENCODED"
+#!   GENERATE_FME_BUILD_NUM="21313"
+#!   COORDSYS="LL84"
+#!   FEATURE_TYPES=""
+#!   MAX_FEATURES=""
+#!   MAX_FEATURES_PER_FEATURE_TYPE=""
+#!   MIN_FEATURES=""
+#!   START_FEATURE=""
+#! >
+#! <METAFILE_PARAMETER
+#!   NAME="DATASET_NAME"
+#!   VALUE="json file"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="MIME_TYPE"
+#!   VALUE="application/geo+json ADD_DISPOSITION"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="READER_DATASET_HINT"
+#!   VALUE="Select the GeoJSON file(s) or type the GeoJSON URL"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="WRITER_DATASET_HINT"
+#!   VALUE="Specify a name for the GeoJSON file"
+#! />
+#! </DATASET>
+#! </DATASETS>
+#! <DATA_TYPES>
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_buffer"
+#!   FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_binarybuffer"
+#!   FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_xml"
+#!   FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_varchar(width)"
+#!   FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_varbinary(width)"
+#!   FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="boolean"
+#!   FME_TYPE="fme_boolean"
+#!   FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_char(width)"
+#!   FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_binary(width)"
+#!   FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_datetime"
+#!   FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_time"
+#!   FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_date"
+#!   FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="float"
+#!   FME_TYPE="fme_real64"
+#!   FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="float"
+#!   FME_TYPE="fme_real32"
+#!   FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="int"
+#!   FME_TYPE="fme_int64"
+#!   FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_uint64"
+#!   FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="int"
+#!   FME_TYPE="fme_int32"
+#!   FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="int"
+#!   FME_TYPE="fme_uint32"
+#!   FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="int"
+#!   FME_TYPE="fme_int16"
+#!   FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="int"
+#!   FME_TYPE="fme_uint16"
+#!   FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="int"
+#!   FME_TYPE="fme_int8"
+#!   FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="int"
+#!   FME_TYPE="fme_uint8"
+#!   FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_decimal(width,decimal)"
+#!   FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="json"
+#!   FME_TYPE="fme_json"
+#!   FORMAT="GEOJSON"
+#! />
+#! </DATA_TYPES>
+#! <GEOM_TYPES>
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="json_point"
+#!   FME_TYPE="fme_point"
+#!   FORMAT="GEOJSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="json_line"
+#!   FME_TYPE="fme_line"
+#!   FORMAT="GEOJSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="json_polygon"
+#!   FME_TYPE="fme_area"
+#!   FORMAT="GEOJSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="json_text"
+#!   FME_TYPE="fme_text"
+#!   FORMAT="GEOJSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="json_ellipse"
+#!   FME_TYPE="fme_ellipse"
+#!   FORMAT="GEOJSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="json_arc"
+#!   FME_TYPE="fme_arc"
+#!   FORMAT="GEOJSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="json_rectangle"
+#!   FME_TYPE="fme_rectangle"
+#!   FORMAT="GEOJSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="json_rounded_rectangle"
+#!   FME_TYPE="fme_rounded_rectangle"
+#!   FORMAT="GEOJSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="json_raster"
+#!   FME_TYPE="fme_raster"
+#!   FORMAT="GEOJSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="json_no_geom"
+#!   FME_TYPE="fme_no_geom"
+#!   FORMAT="GEOJSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="json_collection"
+#!   FME_TYPE="fme_collection"
+#!   FORMAT="GEOJSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="json_line"
+#!   FME_TYPE="fme_surface"
+#!   FORMAT="GEOJSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="json_line"
+#!   FME_TYPE="fme_solid"
+#!   FORMAT="GEOJSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="json_polygon"
+#!   FME_TYPE="fme_point_cloud"
+#!   FORMAT="GEOJSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="json_polygon"
+#!   FME_TYPE="fme_voxel_grid"
+#!   FORMAT="GEOJSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="json_no_geom"
+#!   FME_TYPE="fme_feature_table"
+#!   FORMAT="GEOJSON"
+#! />
+#! </GEOM_TYPES>
+#! <FEATURE_TYPES>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="true"
+#!   NODE_NAME="kommuner_komprimert"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="false"
+#!   IDENTIFIER="4"
+#!   FEAT_GEOMTYPE="json_polygon json_no_geom"
+#!   POSITION="-2465.6496564965655 397.75343753437596"
+#!   BOUNDING_RECT="-2465.6496564965655 397.75343753437596 718.75718757187622 71"
+#!   ORDER="500000000000077"
+#!   COLLAPSED="false"
+#!   KEYWORD="GEOJSON_1"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   HIDDEN_USER_ATTRS=""
+#!   MERGE_FILTER="*"
+#!   MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#!   MERGE_FILTER_CASE_SENSITIVE="true"
+#!   DYNAMIC_SCHEMA="false"
+#! >
+#!     <FEAT_ATTRIBUTE ATTR_NAME="kommunenummer" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="objtype" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="lokalid" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="oppdateringsdato" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="datauttaksdato" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="versjonid" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="opphav" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="samiskforvaltningsomrade" ATTR_TYPE="boolean" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="datafangstdato" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="navnerom" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="navn{}.rekkefolge" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="navn{}.sprak" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="navn{}.navn" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! </FEATURE_TYPES>
+#! <FMESERVER>
+#! <READER_DATASETS>
+#! <DATASET
+#!   NAME="GEOJSON_1"
+#!   OVERRIDE="-GEOJSON_1_DATASET"
+#!   DATASET="GEOJSON_1/kommuner_komprimert.json"
+#! />
+#! </READER_DATASETS>
+#! <WRITER_DATASETS>
+#! <DATASET
+#!   NAME="FeatureWriter"
+#!   OVERRIDE="--FeatureWriterDataset_FeatureWriter"
+#!   DATASET="FeatureWriter/"
+#! />
+#! </WRITER_DATASETS>
+#! <DEPENDENCIES>
+#! <PACKAGES>
+#! <PACKAGE
+#!   NAME="safe.google-cloud-storage"
+#!   VERSION="1.3.0"
+#! />
+#! </PACKAGES>
+#! </DEPENDENCIES>
+#! </FMESERVER>
+#! <GLOBAL_PARAMETERS>
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI NAMED_CONNECTION_OR_ATTR BigQuery_connection &quot;safe.google-bigquery.Google BigQuery&quot;% BigQuery Account:"
+#!   DEFAULT_VALUE=""
+#!   IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI OPTIONAL TEXT BigQuery_project project_name:"
+#!   DEFAULT_VALUE=""
+#!   IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI OPTIONAL TEXT_OR_ATTR BigQuery_dataset dataset_name:"
+#!   DEFAULT_VALUE="workshop"
+#!   IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI OPTIONAL STRING_OR_ATTR BigQuery_table table_name"
+#!   DEFAULT_VALUE="kommune"
+#!   IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI FILE_OR_URL Source_URL GeoJSON_Documents(*.json;*.geojson)|*.json;*.geojson|Compressed_Files(*.bz2;*.gz)|*.bz2;*.gz|Archive_Files(*.7z;*.7zip;*.rar;*.rvz;*.tar;*.tar.bz2;*.tar.gz;*.tgz;*.zip;*.zipx)|*.7z;*.7zip;*.rar;*.rvz;*.tar;*.tar.bz2;*.tar.gz;*.tgz;*.zip;*.zipx|All_Files(*)|* Source GeoJSON File or URL"
+#!   DEFAULT_VALUE="https://github.com/smistad/konverter-norgeskart-projeksjon/releases/download/v2020/kommuner_komprimert.json"
+#!   IS_STAND_ALONE="false"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI NAMED_CONNECTION_ENCODED GCS_connector &quot;safe.google-cloud-storage.Google Cloud Storage&quot;%&quot;Google Cloud Storage&quot; Google Cloud Storage Account"
+#!   DEFAULT_VALUE=""
+#!   IS_STAND_ALONE="false"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI FILENAME Lokal_GeoJSON_fil GeoJSON_Documents(*.json;*.geojson)|*.json;*.geojson|All_Files(*)|* Save to local file"
+#!   DEFAULT_VALUE=""
+#!   IS_STAND_ALONE="false"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI WEB_SELECT_ENCODED GCS_bucket SERVICE:safe.google-cloud-storage.Google&lt;space&gt;Cloud&lt;space&gt;Storage%DEPENDENT_PARAMETERS:CREDENTIAL_SOURCE:__googlecloudstorageconnector_connection:_FME_PROJECT_ID%MODULE:fmepy_google_cloud_storage.resource_selector%KEYVALS:resource,buckets%PROMPTFORTITLE%SHOWID%SELECTION:ITEMS_ONLY%NO_SEARCH%SINGLEDEPTH%ITEM_ICON::/images/bucket.png GCS bucket for upload (without gs:// prefix)"
+#!   DEFAULT_VALUE=""
+#!   IS_STAND_ALONE="false"
+#! />
+#! </GLOBAL_PARAMETERS>
+#! <USER_PARAMETERS
+#!   FORM="eyJwYXJhbWV0ZXJzIjpbeyJjaG9pY2VTZXR0aW5ncyI6eyJjaG9pY2VTZXQiOiJ3ZWJDb25uZWN0aW9ucyIsInNlcnZpY2VzIjpbInNhZmUuZ29vZ2xlLWJpZ3F1ZXJ5Lkdvb2dsZSBCaWdRdWVyeSJdfSwibmFtZSI6IkJpZ1F1ZXJ5X2Nvbm5lY3Rpb24iLCJwcm9tcHQiOiJCaWdRdWVyeSBBY2NvdW50OiIsInJlcXVpcmVkIjp0cnVlLCJzdXBwb3J0ZWRWYWx1ZVR5cGVzIjpbImV4cHJlc3Npb24iLCJnbG9iYWxQYXJhbWV0ZXIiXSwidHlwZSI6ImRyb3Bkb3duIiwidmFsdWVUeXBlIjoic3RyaW5nIn0seyJlZGl0b3IiOiJwbGFpbnRleHQiLCJuYW1lIjoiQmlnUXVlcnlfcHJvamVjdCIsInByb21wdCI6InByb2plY3RfbmFtZToiLCJyZXF1aXJlZCI6ZmFsc2UsInNob3dFZGl0QnV0dG9uIjpmYWxzZSwidHlwZSI6InRleHQiLCJ2YWx1ZVR5cGUiOiJzdHJpbmcifSx7ImRlZmF1bHRWYWx1ZSI6IndvcmtzaG9wIiwiZWRpdG9yIjoicGxhaW50ZXh0IiwibmFtZSI6IkJpZ1F1ZXJ5X2RhdGFzZXQiLCJwcm9tcHQiOiJkYXRhc2V0X25hbWU6IiwicmVxdWlyZWQiOmZhbHNlLCJzdXBwb3J0ZWRWYWx1ZVR5cGVzIjpbImV4cHJlc3Npb24iLCJnbG9iYWxQYXJhbWV0ZXIiXSwidHlwZSI6InRleHQiLCJ2YWx1ZVR5cGUiOiJzdHJpbmcifSx7ImRlZmF1bHRWYWx1ZSI6ImtvbW11bmUiLCJlZGl0b3IiOiJwbGFpbnRleHQiLCJuYW1lIjoiQmlnUXVlcnlfdGFibGUiLCJwcm9tcHQiOiJ0YWJsZV9uYW1lIiwicmVxdWlyZWQiOmZhbHNlLCJzaG93RWRpdEJ1dHRvbiI6ZmFsc2UsInN1cHBvcnRlZFZhbHVlVHlwZXMiOlsiZXhwcmVzc2lvbiIsImdsb2JhbFBhcmFtZXRlciJdLCJ0eXBlIjoidGV4dCIsInZhbHVlVHlwZSI6InN0cmluZyJ9LHsiYWNjZXNzTW9kZSI6InJlYWQiLCJhbGxvd1VSTCI6dHJ1ZSwiZGVmYXVsdFZhbHVlIjoiaHR0cHM6Ly9naXRodWIuY29tL3NtaXN0YWQva29udmVydGVyLW5vcmdlc2thcnQtcHJvamVrc2pvbi9yZWxlYXNlcy9kb3dubG9hZC92MjAyMC9rb21tdW5lcl9rb21wcmltZXJ0Lmpzb24iLCJmaWx0ZXJzIjpbeyJkZXNjcmlwdGlvbiI6Ikdlb0pTT04gRG9jdW1lbnRzIiwiZmlsdGVyIjpbIiouanNvbiIsIiouZ2VvanNvbiJdfSx7ImRlc2NyaXB0aW9uIjoiQ29tcHJlc3NlZCBGaWxlcyIsImZpbHRlciI6WyIqLmJ6MiIsIiouZ3oiXX0seyJkZXNjcmlwdGlvbiI6IkFyY2hpdmUgRmlsZXMiLCJmaWx0ZXIiOlsiKi43eiIsIiouN3ppcCIsIioucmFyIiwiKi5ydnoiLCIqLnRhciIsIioudGFyLmJ6MiIsIioudGFyLmd6IiwiKi50Z3oiLCIqLnppcCIsIiouemlweCJdfSx7ImRlc2NyaXB0aW9uIjoiQWxsIEZpbGVzIiwiZmlsdGVyIjpbIioiXX1dLCJpdGVtc1RvU2VsZWN0IjoiZmlsZXMiLCJuYW1lIjoiU291cmNlX1VSTCIsInByb21wdCI6IlNvdXJjZSBHZW9KU09OIEZpbGUgb3IgVVJMIiwicmVxdWlyZWQiOnRydWUsInNlbGVjdE11bHRpcGxlIjp0cnVlLCJ0eXBlIjoiZmlsZSIsInZhbGlkYXRlRXhpc3RlbmNlIjpmYWxzZSwidmFsdWVUeXBlIjoic3RyaW5nIn0seyJjaG9pY2VTZXR0aW5ncyI6eyJjaG9pY2VTZXQiOiJ3ZWJDb25uZWN0aW9ucyIsInNlcnZpY2VzIjpbInNhZmUuZ29vZ2xlLWNsb3VkLXN0b3JhZ2UuR29vZ2xlIENsb3VkIFN0b3JhZ2UiLCJHb29nbGUgQ2xvdWQgU3RvcmFnZSJdfSwibmFtZSI6IkdDU19jb25uZWN0b3IiLCJwcm9tcHQiOiJHb29nbGUgQ2xvdWQgU3RvcmFnZSBBY2NvdW50IiwicmVxdWlyZWQiOnRydWUsInR5cGUiOiJkcm9wZG93biIsInZhbHVlVHlwZSI6InN0cmluZ0VuY29kZWQifSx7ImFjY2Vzc01vZGUiOiJ3cml0ZSIsImZpbHRlcnMiOlt7ImRlc2NyaXB0aW9uIjoiR2VvSlNPTiBEb2N1bWVudHMiLCJmaWx0ZXIiOlsiKi5qc29uIiwiKi5nZW9qc29uIl19LHsiZGVzY3JpcHRpb24iOiJBbGwgRmlsZXMiLCJmaWx0ZXIiOlsiKiJdfV0sIml0ZW1zVG9TZWxlY3QiOiJmaWxlcyIsIm5hbWUiOiJMb2thbF9HZW9KU09OX2ZpbCIsInByb21wdCI6IlNhdmUgdG8gbG9jYWwgZmlsZSIsInJlcXVpcmVkIjp0cnVlLCJzZWxlY3RNdWx0aXBsZSI6ZmFsc2UsInR5cGUiOiJmaWxlIiwidmFsaWRhdGVFeGlzdGVuY2UiOmZhbHNlLCJ2YWx1ZVR5cGUiOiJzdHJpbmcifSx7ImNob2ljZVNldHRpbmdzIjp7ImNob2ljZVNldCI6ImR5bmFtaWNTZXJ2aWNlVmFsdWVzIiwiY29uZmlndXJhdGlvbiI6W3sibmFtZSI6IkNSRURFTlRJQUxfU09VUkNFIiwidmFsdWUiOnsicGFyYW1ldGVyIjoiQ1JFREVOVElBTF9TT1VSQ0UifX0seyJuYW1lIjoiX19nb29nbGVjbG91ZHN0b3JhZ2Vjb25uZWN0b3JfY29ubmVjdGlvbiIsInZhbHVlIjp7InBhcmFtZXRlciI6Il9fZ29vZ2xlY2xvdWRzdG9yYWdlY29ubmVjdG9yX2Nvbm5lY3Rpb24ifX0seyJuYW1lIjoiX0ZNRV9QUk9KRUNUX0lEIiwidmFsdWUiOnsicGFyYW1ldGVyIjoiX0ZNRV9QUk9KRUNUX0lEIn19LHsibmFtZSI6InJlc291cmNlIiwidmFsdWUiOiJidWNrZXRzIn1dLCJpdGVtSWNvbiI6IjovaW1hZ2VzL2J1Y2tldC5wbmciLCJtb2R1bGUiOiJmbWVweV9nb29nbGVfY2xvdWRfc3RvcmFnZS5yZXNvdXJjZV9zZWxlY3RvciIsInNlbGVjdGlvbiI6WyJvYmplY3RzIl0sInNlcnZpY2VOYW1lIjoic2FmZS5nb29nbGUtY2xvdWQtc3RvcmFnZS5Hb29nbGUgQ2xvdWQgU3RvcmFnZSIsInNob3dTZWFyY2giOmZhbHNlLCJ1c2VQcm9tcHRBc1RpdGxlIjp0cnVlfSwibmFtZSI6IkdDU19idWNrZXQiLCJwcm9tcHQiOiJHQ1MgYnVja2V0IGZvciB1cGxvYWQgKHdpdGhvdXQgZ3M6Ly8gcHJlZml4KSIsInJlcXVpcmVkIjp0cnVlLCJ0eXBlIjoibGlzdGJveCIsInZhbHVlVHlwZSI6InN0cmluZ0VuY29kZWQifV19"
+#! >
+#! <PARAMETER_INFO>
+#!     <INFO NAME="BigQuery_connection" IS_STAND_ALONE="true" />
+#!     <INFO NAME="BigQuery_dataset" IS_STAND_ALONE="true" />
+#!     <INFO NAME="BigQuery_project" IS_STAND_ALONE="true" />
+#!     <INFO NAME="BigQuery_table" IS_STAND_ALONE="true" />
+#!     <INFO NAME="GCS_bucket" IS_STAND_ALONE="false" />
+#!     <INFO NAME="GCS_connector" IS_STAND_ALONE="false" />
+#!     <INFO NAME="Lokal_GeoJSON_fil" IS_STAND_ALONE="false" />
+#!     <INFO NAME="Source_URL" IS_STAND_ALONE="false" />
+#! </PARAMETER_INFO>
+#! </USER_PARAMETERS>
+#! <COMMENTS>
+#! <COMMENT
+#!   IDENTIFIER="3"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;(1) Konfigurer GeoJSON reader:&lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- legge til en GeoJSON reader &lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- konfigurer readeren: &lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&#9;- som kildefil set url = &lt;a href=&quot;https://github.com/smistad/konverter-norgeskart-&quot;&gt;&lt;span style=&quot; text-decoration: underline;&quot;&gt;https://github.com/smistad/konverter-norgeskart-&lt;/span&gt;&lt;/a&gt;&lt;a href=&quot;https://github.com/smistad/konverter-norgeskart-projeksjon/releases/download/v2020/kommuner_komprimert.json&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;&#9;projeksjon/releases/download/v2020/kommuner_komprimert.json&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;  - la alt annet stå som default&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="-2520.0805344306291 761.46594799281365"
+#!   TOP_LEFT="-2520.0805344306291 761.46594799281365"
+#!   BOTTOM_RIGHT="115.62615626156276 487.71351046843841"
+#!   BOUNDING_RECT="-2520.0805344306291 761.46594799281365 2635.7066906921918 273.75243752437524"
+#!   ORDER="500000000000080"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   CUSTOM_USER_COLOR="false"
+#!   COLOUR="1,1,0.95686274509803926,0.78431372549019607"
+#!   SIZE_POLICY="10"
+#!   ANCHORED_NODE="0"
+#! />
+#! <COMMENT
+#!   IDENTIFIER="5"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;(3) Konfigurer BigQuery writer&lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- legg til en GoogleBigQueryWriter ved å trykke på &amp;quot;Add writer&amp;quot; og finne frem &amp;quot;Google BigQuery&amp;quot; under &amp;quot;More formats&amp;quot; i &amp;quot;Formats&amp;quot;-boksen&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- Gå så inn på &amp;quot;parameters&amp;quot;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- Konfigurer &amp;quot;Service connection&amp;quot; til å bruke &amp;quot;Web connection&amp;quot; og velg connection du lagde i&lt;span style=&quot; font-weight:600;&quot;&gt;  (0)&lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- Velg også workshop-prosjektet du har fått utdelt, samt &amp;quot;workshop&amp;quot;-datasettet du lagde i sesjon 1.&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- Velg spatial type = &amp;quot;Geography&amp;quot; og skriv inn at kolonnenavnet skal være &amp;quot;geometry&amp;quot;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- Trykk OK for å gå ut av &amp;quot;parameters&amp;quot;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- IKKE sett en verdi i &amp;quot;coordinate system&amp;quot;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- La &amp;quot;Table definition&amp;quot; være &amp;quot;Automatic&amp;quot;. Trykk OK.&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- Når du blir spurt om det, velg tabellnavn, f.eks. &amp;quot;kommuner&amp;quot;, og trykk OK.&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- Koble outputten fra AttributeKeeper til input på BigQueryWriter-en som du akkurat lagde&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- Verifiser at modulen nå har fått synlige attributter som &amp;quot;kommunenummer&amp;quot; og &amp;quot;navn&amp;quot;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- Kjør workflowen &lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- Utforsk destinasjonstabellen i BigQuery&apos;s brukergrensesnitt (nettleser)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="763.73923075690448 1364.6276905507659"
+#!   TOP_LEFT="763.73923075690448 1364.6276905507659"
+#!   BOTTOM_RIGHT="2191.3576736079995 1047.1248155220155"
+#!   BOUNDING_RECT="763.73923075690448 1364.6276905507659 1427.6184428510951 317.50287502875028"
+#!   ORDER="500000000000080"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   CUSTOM_USER_COLOR="false"
+#!   COLOUR="1,1,0.95686274509803926,0.78431372549019607"
+#!   SIZE_POLICY="10"
+#!   ANCHORED_NODE="0"
+#! />
+#! <COMMENT
+#!   IDENTIFIER="6"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;(2) Konfigurer en FeatureWriter i GEOJson format, som lagrer fil lokalt&lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- bruk GeoJSON reader som input &lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- bruk default verdiene i konfigurasjon&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;  &lt;/p&gt;&#10;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="-1339.0519008913673 -347.75663846427494"
+#!   TOP_LEFT="-1339.0519008913673 -347.75663846427494"
+#!   BOTTOM_RIGHT="88.566541959727829 -665.25951349302522"
+#!   BOUNDING_RECT="-1339.0519008913673 -347.75663846427494 1427.6184428510951 317.50287502875028"
+#!   ORDER="500000000000080"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   CUSTOM_USER_COLOR="false"
+#!   COLOUR="1,1,0.95686274509803926,0.78431372549019607"
+#!   SIZE_POLICY="10"
+#!   ANCHORED_NODE="0"
+#! />
+#! <COMMENT
+#!   IDENTIFIER="10"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;(0) Konfigurer en web connection til BigQuery og Cloud Storage&lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- velg Tools -&amp;gt; FME options -&amp;gt; Web connections -&amp;gt; &amp;quot;+&amp;quot;  -&amp;gt; &amp;quot;GoogleBigQuery (safe.GoogleBigQuery)&amp;quot;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- Trykk på &amp;quot;authenticate&amp;quot; og går gjennom interaktive oAuth2 autentisering (krever GCP bruker + passord)&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- Gjør det samme til å opprette og konfigurere en GoogleCloudStorage connection&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="-2520.0805344306291 1058.3439167725005"
+#!   TOP_LEFT="-2520.0805344306291 1058.3439167725005"
+#!   BOTTOM_RIGHT="-365.62865628656255 915.8427917612504"
+#!   BOUNDING_RECT="-2520.0805344306291 1058.3439167725005 2154.4518781440665 142.50112501125011"
+#!   ORDER="500000000000080"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   CUSTOM_USER_COLOR="false"
+#!   COLOUR="1,1,0.95686274509803926,0.78431372549019607"
+#!   SIZE_POLICY="10"
+#!   ANCHORED_NODE="0"
+#! />
+#! <COMMENT
+#!   IDENTIFIER="14"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;(4) Bruk GoogleCloudStorageConnector til å lese en lokal fil og laste opp till en GCS bucket&lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- google cloud storage trenger sin egen web-connection til autentisering&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- koble summary fra FeatureWriter som input til StorageConnector&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="861.47040883785621 -833.3416667500012"
+#!   TOP_LEFT="861.47040883785621 -833.3416667500012"
+#!   BOTTOM_RIGHT="2289.0888516889513 -1150.8445417787516"
+#!   BOUNDING_RECT="861.47040883785621 -833.3416667500012 1427.6184428510951 317.50287502875028"
+#!   ORDER="500000000000080"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   CUSTOM_USER_COLOR="false"
+#!   COLOUR="1,1,0.95686274509803926,0.78431372549019607"
+#!   SIZE_POLICY="10"
+#!   ANCHORED_NODE="0"
+#! />
+#! <COMMENT
+#!   IDENTIFIER="12"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Plasser din &amp;lt;GoogleBigQueryWriter&amp;gt; under her&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="763.73923075690448 365.9814911506769"
+#!   TOP_LEFT="763.73923075690448 365.9814911506769"
+#!   BOTTOM_RIGHT="1513.7392307569044 315.9814911506769"
+#!   BOUNDING_RECT="763.73923075690448 365.9814911506769 750 50"
+#!   ORDER="500000000000103"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   CUSTOM_USER_COLOR="true"
+#!   COLOUR="0.33333333333333331,0.66666666666666663,1,0.78431372549019607"
+#!   SIZE_POLICY="10"
+#!   ANCHORED_NODE="0"
+#! />
+#! <COMMENT
+#!   IDENTIFIER="13"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Kort om denne oppgaven:&lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- Det vi skal gjøre er å laste ned et datasett som inneholder norske kommuner og deres kommunegrenser, for så å skrive dette til en lokal fil, laste opp fila til GCS, samt importere kommunene til BigQuery&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- Oppgavene står i gule lapper ala den du leser nå&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- For å spare tid har vi allerede lagt inn løsning for de fleste oppgaver. Du bør likevel lese gjennom oppgavene for å forstå hvordan workflowen henger sammen.&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- Du må selv utføre oppgave 0 og 3&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- I prosjektet ditt finnes det allerede en bøtte ved navn &amp;quot;saga-workshop-&amp;lt;ditt_kortnavn&amp;gt;-fme-bucket&amp;quot; som dere skal bruke som GCS-bøtte her&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="-2520.0805344306291 1556.5337171523527"
+#!   TOP_LEFT="-2520.0805344306291 1556.5337171523527"
+#!   BOTTOM_RIGHT="-368.75368753687553 1457.7830296454777"
+#!   BOUNDING_RECT="-2520.0805344306291 1556.5337171523527 2151.3268468937536 98.750687506875067"
+#!   ORDER="500000000000104"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   CUSTOM_USER_COLOR="false"
+#!   COLOUR="1,1,0.95686274509803926,0.78431372549019607"
+#!   SIZE_POLICY="10"
+#!   ANCHORED_NODE="0"
+#! />
+#! <COMMENT
+#!   IDENTIFIER="20"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Kommunedatasettet kan inneholde en liste med både samisk og norsk kommunenavn. Uheldigvis klarer ikke GoogleBigQueryWriter å skrive lister eller nøstede strukturer til BigQuery, selv om BigQuery støtter det. Derfor bruker vi her ListIndexer og AttributeKeeper for å plukke ut det norske kommunenavnet.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="-1443.5703390071974 362.8874008038328"
+#!   TOP_LEFT="-1443.5703390071974 362.8874008038328"
+#!   BOTTOM_RIGHT="13.746214356356177 264.13671329695774"
+#!   BOUNDING_RECT="-1443.5703390071974 362.8874008038328 1457.3165533635536 98.750687506875067"
+#!   ORDER="500000000000117"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   CUSTOM_USER_COLOR="false"
+#!   COLOUR="1,1,0.95686274509803926,0.78431372549019607"
+#!   SIZE_POLICY="10"
+#!   ANCHORED_NODE="0"
+#! />
+#! </COMMENTS>
+#! <CONSTANTS>
+#! </CONSTANTS>
+#! <BOOKMARKS>
+#! </BOOKMARKS>
+#! <TRANSFORMERS>
+#! <TRANSFORMER
+#!   IDENTIFIER="11"
+#!   TYPE="safe.google-cloud-storage.GoogleCloudStorageConnector"
+#!   VERSION="2"
+#!   POSITION="861.47040883785621 -1158.5642172211199"
+#!   BOUNDING_RECT="861.47040883785621 -1158.5642172211199 625.03725037250615 71"
+#!   ORDER="500000000000096"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="21313"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <XFORM_ATTR ATTR_NAME="_feature_type{}.count" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_feature_type{}.name" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_dataset" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_total_features_written" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_url" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_name" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_full_path" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_bucket" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <OUTPUT_FEAT NAME="INITIATOR"/>
+#!     <XFORM_ATTR ATTR_NAME="_feature_type{}.count" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_feature_type{}.name" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_dataset" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_total_features_written" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <OUTPUT_FEAT NAME="&lt;REJECTED&gt;"/>
+#!     <XFORM_ATTR ATTR_NAME="_feature_type{}.count" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="_feature_type{}.name" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="_dataset" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="_total_features_written" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="fme_rejection_code" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="fme_rejection_message" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_PARM PARM_NAME="AUTHENTICATION" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="CREDENTIAL_SOURCE" PARM_VALUE="WEBCONN"/>
+#!     <XFORM_PARM PARM_NAME="OPERATION_TYPE" PARM_VALUE="Upload"/>
+#!     <XFORM_PARM PARM_NAME="PARAMETER_SETUP" PARM_VALUE="_FME_SOURCE_TYPE]File]_FME_SOURCE_FILE]$(Lokal_GeoJSON_fil)]_FME_SOURCE_FOLDER]&lt;Unused&gt;]_FME_INCLUDE_SUBFOLDERS]&lt;Unused&gt;]_FME_CONTENTS_ONLY]&lt;Unused&gt;]_FME_DATA_TO_UPLOAD]&lt;Unused&gt;]_FME_BUCKET]$(GCS_bucket)]_FME_UPLOAD_DESTINATION_PATH]&lt;solidus&gt;]_FME_UPLOAD_ATTR_FILENAME]&lt;Unused&gt;]_FME_HANDLE_EXISTING_FILE]Overwrite]_FME_GCS_ACL]private]_FME_METADATA_GROUP]FME_DISCLOSURE_CLOSED]_FME_CUSTOM_HEADERS]]_FME_ATTRIBUTES_TO_ADD]&quot;_url _name _full_path _bucket&quot;]FME_CONTROLLER_QUERY_FILE]googlecloudstorageconnector_deps&lt;solidus&gt;Upload.fme]FME_CONTROLLER_CHOICE]Upload"/>
+#!     <XFORM_PARM PARM_NAME="REQUEST" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="GoogleCloudStorageConnector"/>
+#!     <XFORM_PARM PARM_NAME="_FME_PROJECT_ID" PARM_VALUE="$(BigQuery_project)"/>
+#!     <XFORM_PARM PARM_NAME="__googlecloudstorageconnector_connection" PARM_VALUE="$(GCS_connector)"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="15"
+#!   TYPE="FeatureWriter"
+#!   VERSION="0"
+#!   POSITION="-741.96455304834751 -650.17640362264342"
+#!   BOUNDING_RECT="-741.96455304834751 -650.17640362264342 430 71"
+#!   ORDER="500000000000102"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="21313"
+#! >
+#!     <OUTPUT_FEAT NAME="kommuner_komprimert"/>
+#!     <XFORM_ATTR ATTR_NAME="kommunenummer" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="objtype" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="lokalid" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="oppdateringsdato" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="datauttaksdato" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="opphav" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="samiskforvaltningsomrade" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="datafangstdato" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="navnerom" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="navn" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <OUTPUT_FEAT NAME="SUMMARY"/>
+#!     <XFORM_ATTR ATTR_NAME="_feature_type{}.count" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_feature_type{}.name" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_dataset" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_total_features_written" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_PARM PARM_NAME="COORDSYS" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="DATASET" PARM_VALUE="$(Lokal_GeoJSON_fil)"/>
+#!     <XFORM_PARM PARM_NAME="DATASET_ATTR" PARM_VALUE="_dataset"/>
+#!     <XFORM_PARM PARM_NAME="DYNGROUP_0" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="FEATURE_TYPES_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="FEATURE_TYPE_LIST_ATTR" PARM_VALUE="_feature_type"/>
+#!     <XFORM_PARM PARM_NAME="FORMAT" PARM_VALUE="GEOJSON"/>
+#!     <XFORM_PARM PARM_NAME="FORMAT_DIRECTIVES" PARM_VALUE="RUNTIME_MACROS,WRITER_CHARSET&lt;comma&gt;UTF-8&lt;comma&gt;WRITE_BOM&lt;comma&gt;No&lt;comma&gt;FILE_STRUCTURE&lt;comma&gt;SINGLE_FEATURE_COLLECTION&lt;comma&gt;PRETTY_PRINT&lt;comma&gt;YES&lt;comma&gt;INDENT_SIZE&lt;comma&gt;0&lt;comma&gt;MAX_COORDINATE_PRECISION&lt;comma&gt;10&lt;comma&gt;COUNTER_CLOCKWISE_AREAS&lt;comma&gt;Yes&lt;comma&gt;WGS84_REPROJECTION&lt;comma&gt;Yes&lt;comma&gt;JSONP_FUNC_NAME&lt;comma&gt;&lt;comma&gt;DESTINATION_DATASETTYPE_VALIDATION&lt;comma&gt;Yes,METAFILE,GEOJSON"/>
+#!     <XFORM_PARM PARM_NAME="FORMAT_PARAMS" PARM_VALUE="GEOJSON_INDENT_SIZE,&quot;OPTIONAL LOOKUP_CHOICE Tabs,0%1&lt;space&gt;space,1%2&lt;space&gt;spaces,2%3&lt;space&gt;spaces,3%4&lt;space&gt;spaces,4%5&lt;space&gt;spaces,5%6&lt;space&gt;spaces,6%7&lt;space&gt;spaces,7%8&lt;space&gt;spaces,8&quot;,GEOJSON&lt;space&gt;Indent&lt;space&gt;Size:,GEOJSON_DESTINATION_DATASETTYPE_VALIDATION,&quot;OPTIONAL NO_EDIT TEXT&quot;,GEOJSON&lt;space&gt;,GEOJSON_JSONP_FUNC_NAME,&quot;OPTIONAL TEXT&quot;,GEOJSON&lt;space&gt;JSONP&lt;space&gt;Function&lt;space&gt;Name:,GEOJSON_FILE_STRUCTURE,&quot;OPTIONAL LOOKUP_CHOICE Single&lt;space&gt;FeatureCollection&lt;space&gt;object&lt;space&gt;containing&lt;space&gt;all&lt;space&gt;features,SINGLE_FEATURE_COLLECTION%Array&lt;space&gt;of&lt;space&gt;FeatureCollection&lt;space&gt;objects&lt;space&gt;-&lt;space&gt;one&lt;space&gt;per&lt;space&gt;feature&lt;space&gt;type,ARRAY_OF_FEATURE_COLLECTIONS%Object&lt;space&gt;with&lt;space&gt;feature&lt;space&gt;type&lt;space&gt;names&lt;space&gt;as&lt;space&gt;keys&lt;comma&gt;&lt;space&gt;FeatureCollection&lt;space&gt;objects&lt;space&gt;as&lt;space&gt;values,OBJECT_WITH_FEATURE_TYPE_KEYS&quot;,GEOJSON&lt;space&gt;File&lt;space&gt;Structure:,GEOJSON_MAX_COORDINATE_PRECISION,&quot;OPTIONAL RANGE_SLIDER 1%15%0%ON&quot;,GEOJSON&lt;space&gt;Coordinate&lt;space&gt;Precision&lt;space&gt;&lt;openparen&gt;Maximum&lt;space&gt;Number&lt;space&gt;of&lt;space&gt;Fractional&lt;space&gt;Digits&lt;closeparen&gt;:,GEOJSON_WGS84_REPROJECTION,&quot;OPTIONAL LOOKUP_CHOICE Yes,Yes%No,No&quot;,GEOJSON&lt;space&gt;Reproject&lt;space&gt;to&lt;space&gt;WGS84:,GEOJSON_WRITER_CHARSET,&quot;OPTIONAL LOOKUP_CHOICE UTF-8,UTF-8%UTF-16,UTF-16%UTF-16BE,UTF-16BE%UTF-16LE,UTF-16LE%UTF-32,UTF-32%UTF-32BE,UTF-32BE%UTF-32LE,UTF-32LE&quot;,GEOJSON&lt;space&gt;Output&lt;space&gt;Character&lt;space&gt;Set:,GEOJSON_WRITE_BOM,&quot;OPTIONAL LOOKUP_CHOICE Yes,Yes%No,No&quot;,GEOJSON&lt;space&gt;Byte&lt;space&gt;Order&lt;space&gt;Marker:,GEOJSON_COUNTER_CLOCKWISE_AREAS,&quot;OPTIONAL LOOKUP_CHOICE Yes,Yes%No,No&quot;,GEOJSON&lt;space&gt;Convert&lt;space&gt;Areas&lt;space&gt;to&lt;space&gt;Counterclockwise:,GEOJSON_PRETTY_PRINT,&quot;OPTIONAL ACTIVECHOICE_LOOKUP Pretty&lt;space&gt;Print,YES%Linear,NO,INDENT_SIZE&quot;,GEOJSON&lt;space&gt;Formatting&lt;space&gt;Type:"/>
+#!     <XFORM_PARM PARM_NAME="GEOJSON_COUNTER_CLOCKWISE_AREAS" PARM_VALUE="Yes"/>
+#!     <XFORM_PARM PARM_NAME="GEOJSON_DESTINATION_DATASETTYPE_VALIDATION" PARM_VALUE="Yes"/>
+#!     <XFORM_PARM PARM_NAME="GEOJSON_FILE_STRUCTURE" PARM_VALUE="SINGLE_FEATURE_COLLECTION"/>
+#!     <XFORM_PARM PARM_NAME="GEOJSON_INDENT_SIZE" PARM_VALUE="0"/>
+#!     <XFORM_PARM PARM_NAME="GEOJSON_JSONP_FUNC_NAME" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="GEOJSON_MAX_COORDINATE_PRECISION" PARM_VALUE="10"/>
+#!     <XFORM_PARM PARM_NAME="GEOJSON_PRETTY_PRINT" PARM_VALUE="YES"/>
+#!     <XFORM_PARM PARM_NAME="GEOJSON_WGS84_REPROJECTION" PARM_VALUE="Yes"/>
+#!     <XFORM_PARM PARM_NAME="GEOJSON_WRITER_CHARSET" PARM_VALUE="UTF-8"/>
+#!     <XFORM_PARM PARM_NAME="GEOJSON_WRITE_BOM" PARM_VALUE="No"/>
+#!     <XFORM_PARM PARM_NAME="GROUP_BY" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="GROUP_BY_MODE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="GROUP_PROCESSING_GROUP" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="MORE_SUMMARY_ATTRS" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="NO_OUTPUT_PORTS" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="OUTPUTPORTS_GROUP" PARM_VALUE="FME_DISCLOSURE_OPEN"/>
+#!     <XFORM_PARM PARM_NAME="OUTPUT_PORTS" PARM_VALUE="kommuner_komprimert kommuner_komprimert"/>
+#!     <XFORM_PARM PARM_NAME="OUTPUT_PORTS_MODE" PARM_VALUE="SELECTED_PORTS"/>
+#!     <XFORM_PARM PARM_NAME="PER_EACH_INPUT" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="SELECTED_PORTS" PARM_VALUE="kommuner_komprimert"/>
+#!     <XFORM_PARM PARM_NAME="SUMMARY_ATTRS_GROUP" PARM_VALUE="FME_DISCLOSURE_OPEN"/>
+#!     <XFORM_PARM PARM_NAME="TOTAL_FEATURES_WRITTEN_ATTR" PARM_VALUE="_total_features_written"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="WRITER_DIRECTIVES" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="WRITER_FEATURE_TYPE_PARAMS" PARM_VALUE="kommuner_komprimert:kommuner_komprimert,ftp_feature_type_name,kommuner_komprimert,ftp_writer,GEOJSON,ftp_dynamic_schema,no,ftp_dynamic_feature_type_name_type,DYN_SCHEMA_PROP_AUTO,ftp_dynamic_geometry_type,DYN_SCHEMA_PROP_AUTO,ftp_dynamic_schema_def_name_type,DYN_SCHEMA_PROP_AUTO,ftp_dynamic_schema_sources,&lt;lt&gt;lt&lt;gt&gt;Unused&lt;lt&gt;gt&lt;gt&gt;,ftp_attribute_source,0,ftp_user_attributes,kommunenummer&lt;comma&gt;string&lt;comma&gt;objtype&lt;comma&gt;string&lt;comma&gt;lokalid&lt;comma&gt;string&lt;comma&gt;oppdateringsdato&lt;comma&gt;string&lt;comma&gt;datauttaksdato&lt;comma&gt;string&lt;comma&gt;opphav&lt;comma&gt;string&lt;comma&gt;samiskforvaltningsomrade&lt;comma&gt;boolean&lt;comma&gt;datafangstdato&lt;comma&gt;string&lt;comma&gt;navnerom&lt;comma&gt;string&lt;comma&gt;navn&lt;comma&gt;string,ftp_user_attribute_values,&lt;comma&gt;&lt;comma&gt;&lt;comma&gt;&lt;comma&gt;&lt;comma&gt;&lt;comma&gt;&lt;comma&gt;&lt;comma&gt;&lt;comma&gt;"/>
+#!     <XFORM_PARM PARM_NAME="WRITER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="WRITER_METAFILE" PARM_VALUE="ATTRIBUTE_CASE,ANY,ATTRIBUTE_INVALID_CHARS,,ATTRIBUTE_LENGTH,600,ATTR_TYPE_MAP,string&lt;comma&gt;fme_buffer&lt;comma&gt;string&lt;comma&gt;fme_binarybuffer&lt;comma&gt;string&lt;comma&gt;fme_xml&lt;comma&gt;string&lt;comma&gt;fme_varchar&lt;openparen&gt;width&lt;closeparen&gt;&lt;comma&gt;string&lt;comma&gt;fme_varbinary&lt;openparen&gt;width&lt;closeparen&gt;&lt;comma&gt;boolean&lt;comma&gt;fme_boolean&lt;comma&gt;string&lt;comma&gt;fme_char&lt;openparen&gt;width&lt;closeparen&gt;&lt;comma&gt;string&lt;comma&gt;fme_binary&lt;openparen&gt;width&lt;closeparen&gt;&lt;comma&gt;string&lt;comma&gt;fme_datetime&lt;comma&gt;string&lt;comma&gt;fme_time&lt;comma&gt;string&lt;comma&gt;fme_date&lt;comma&gt;float&lt;comma&gt;fme_real64&lt;comma&gt;float&lt;comma&gt;fme_real32&lt;comma&gt;int&lt;comma&gt;fme_int64&lt;comma&gt;string&lt;comma&gt;fme_uint64&lt;comma&gt;int&lt;comma&gt;fme_int32&lt;comma&gt;int&lt;comma&gt;fme_uint32&lt;comma&gt;int&lt;comma&gt;fme_int16&lt;comma&gt;int&lt;comma&gt;fme_uint16&lt;comma&gt;int&lt;comma&gt;fme_int8&lt;comma&gt;int&lt;comma&gt;fme_uint8&lt;comma&gt;string&lt;comma&gt;&lt;quote&gt;fme_decimal&lt;openparen&gt;width&lt;comma&gt;decimal&lt;closeparen&gt;&lt;quote&gt;&lt;comma&gt;json&lt;comma&gt;fme_json,DEST_ILLEGAL_ATTR_LIST,,FEATURE_TYPE_CASE,ANY,FEATURE_TYPE_INVALID_CHARS,,FEATURE_TYPE_LENGTH,0,FEATURE_TYPE_LENGTH_INCLUDES_PREFIX,false,FEATURE_TYPE_RESERVED_WORDS,,FORMAT_METAFILE,$(FME_HOME_ENCODED)metafile&lt;backslash&gt;GEOJSON.fmf,FORMAT_NAME,GEOJSON,GEOM_MAP,json_point&lt;comma&gt;fme_point&lt;comma&gt;json_line&lt;comma&gt;fme_line&lt;comma&gt;json_polygon&lt;comma&gt;fme_polygon&lt;comma&gt;json_text&lt;comma&gt;fme_text&lt;comma&gt;json_ellipse&lt;comma&gt;fme_ellipse&lt;comma&gt;json_arc&lt;comma&gt;fme_arc&lt;comma&gt;json_rectangle&lt;comma&gt;fme_rectangle&lt;comma&gt;json_rounded_rectangle&lt;comma&gt;fme_rounded_rectangle&lt;comma&gt;json_raster&lt;comma&gt;fme_raster&lt;comma&gt;json_no_geom&lt;comma&gt;fme_no_geom&lt;comma&gt;json_collection&lt;comma&gt;fme_collection&lt;comma&gt;json_line&lt;comma&gt;fme_surface&lt;comma&gt;json_line&lt;comma&gt;fme_solid&lt;comma&gt;json_polygon&lt;comma&gt;fme_point_cloud&lt;comma&gt;json_polygon&lt;comma&gt;fme_voxel_grid&lt;comma&gt;json_no_geom&lt;comma&gt;fme_feature_table,READER_ATTR_INDEX_TYPES,,READER_USES_DEF,yes,SOURCE,no,SUPPORTS_FEAT_TYPE_FANOUT,yes,SUPPORTS_MULTI_GEOM,yes,WORKBENCH_CANNED_SCHEMA,,WRITER,GEOJSON,WRITER_ATTR_INDEX_TYPES,,WRITER_DEFLINE_PARMS,,WRITER_DEF_LINE_TEMPLATE,&lt;opencurly&gt;FME_GEN_GROUP_NAME&lt;closecurly&gt;,WRITER_FORMAT_PARAMETER,MIME_TYPE&lt;comma&gt;&lt;quote&gt;application&lt;solidus&gt;geo+json&lt;space&gt;ADD_DISPOSITION&lt;quote&gt;&lt;comma&gt;DATASET_NAME&lt;comma&gt;&lt;quote&gt;json&lt;space&gt;file&lt;quote&gt;&lt;comma&gt;READER_DATASET_HINT&lt;comma&gt;&lt;quote&gt;Select&lt;space&gt;the&lt;space&gt;GeoJSON&lt;space&gt;file&lt;openparen&gt;s&lt;closeparen&gt;&lt;space&gt;or&lt;space&gt;type&lt;space&gt;the&lt;space&gt;GeoJSON&lt;space&gt;URL&lt;quote&gt;&lt;comma&gt;WRITER_DATASET_HINT&lt;comma&gt;&lt;quote&gt;Specify&lt;space&gt;a&lt;space&gt;name&lt;space&gt;for&lt;space&gt;the&lt;space&gt;GeoJSON&lt;space&gt;file&lt;quote&gt;,WRITER_HAS_DEFLINE_ATTRS,yes,WRITER_USES_DEF,yes"/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="FeatureWriter"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="24"
+#!   TYPE="ListIndexer"
+#!   VERSION="3"
+#!   POSITION="-1390.9708031108482 74.468536421845641"
+#!   BOUNDING_RECT="-1390.9708031108482 74.468536421845641 430 71"
+#!   ORDER="500000000000115"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="21313"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="kommunenummer" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="objtype" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="lokalid" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="oppdateringsdato" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="datauttaksdato" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="versjonid" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="opphav" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="samiskforvaltningsomrade" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="datafangstdato" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="navnerom" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="navn{}.rekkefolge" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="navn{}.sprak" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="navn{}.navn" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="rekkefolge" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="sprak" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="navn" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="INDEX" PARM_VALUE="0"/>
+#!     <XFORM_PARM PARM_NAME="LIST_ATTR" PARM_VALUE="navn{}"/>
+#!     <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="PREFIX" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="SUFFIX" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="ListIndexer:_0"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="21"
+#!   TYPE="AttributeKeeper"
+#!   VERSION="3"
+#!   POSITION="-625.92629629820601 74.468536421845641"
+#!   BOUNDING_RECT="-625.92629629820601 74.468536421845641 454 71"
+#!   ORDER="500000000000116"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="21313"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="kommunenummer" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="objtype" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="lokalid" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="oppdateringsdato" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="datauttaksdato" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="opphav" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="samiskforvaltningsomrade" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="datafangstdato" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="navnerom" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="navn" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="CREATE_BULK_MODE_FEATURES" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="KEEP_ATTRS" PARM_VALUE="datafangstdato,datauttaksdato,kommunenummer,lokalid,navn,navnerom,objtype,oppdateringsdato,opphav,samiskforvaltningsomrade"/>
+#!     <XFORM_PARM PARM_NAME="KEEP_LIST" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="OUTPUT_ON_ATTRIBUTE_CHANGE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeKeeper"/>
+#! </TRANSFORMER>
+#! </TRANSFORMERS>
+#! <FEAT_LINKS>
+#! <FEAT_LINK
+#!   IDENTIFIER="25"
+#!   SOURCE_NODE="4"
+#!   TARGET_NODE="24"
+#!   SOURCE_PORT_DESC="-1"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0,0,0,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="19"
+#!   SOURCE_NODE="21"
+#!   TARGET_NODE="15"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="fi 0 kommuner_komprimert"
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0,0,0,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="22"
+#!   SOURCE_NODE="24"
+#!   TARGET_NODE="21"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0,0,0,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="17"
+#!   SOURCE_NODE="15"
+#!   TARGET_NODE="11"
+#!   SOURCE_PORT_DESC="fo 1 SUMMARY"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0,0,0,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! </FEAT_LINKS>
+#! <BREAKPOINTS>
+#! </BREAKPOINTS>
+#! <ATTR_LINKS>
+#! </ATTR_LINKS>
+#! <SUBDOCUMENTS>
+#! </SUBDOCUMENTS>
+#! <LOOKUP_TABLES>
+#! </LOOKUP_TABLES>
+#! </WORKSPACE>
+
+FME_PYTHON_VERSION ArcGISPro27
+ARCGIS_COMPATIBILITY ARCGISPRO
+GUI IGNORE SourceDataset_GEOJSON_1,GEOJSON_IN_USE_SEARCH_ENVELOPE_GEOJSON_1,GEOJSON_IN_SEARCH_ENVELOPE_MINX_GEOJSON_1,GEOJSON_IN_SEARCH_ENVELOPE_MINY_GEOJSON_1,GEOJSON_IN_SEARCH_ENVELOPE_MAXX_GEOJSON_1,GEOJSON_IN_SEARCH_ENVELOPE_MAXY_GEOJSON_1,GEOJSON_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_GEOJSON_1,GEOJSON_IN_CLIP_TO_ENVELOPE_GEOJSON_1,GEOJSON_IN_NETWORK_AUTHENTICATION_GEOJSON_1
+# ============================================================================
+DEFAULT_MACRO BigQuery_connection 
+DEFAULT_MACRO BigQuery_project 
+DEFAULT_MACRO BigQuery_dataset workshop
+DEFAULT_MACRO BigQuery_table kommune
+DEFAULT_MACRO Source_URL https://github.com/smistad/konverter-norgeskart-projeksjon/releases/download/v2020/kommuner_komprimert.json
+DEFAULT_MACRO GCS_connector 
+DEFAULT_MACRO Lokal_GeoJSON_fil 
+DEFAULT_MACRO GCS_bucket 
+# ============================================================================
+GUI NAMED_CONNECTION BigQuery_connection "safe.google-bigquery.Google BigQuery"% BigQuery Account:
+GUI OPTIONAL TEXT BigQuery_project project_name:
+GUI OPTIONAL TEXT BigQuery_dataset dataset_name:
+GUI OPTIONAL STRING BigQuery_table table_name
+GUI FILE_OR_URL Source_URL GeoJSON_Documents(*.json;*.geojson)|*.json;*.geojson|Compressed_Files(*.bz2;*.gz)|*.bz2;*.gz|Archive_Files(*.7z;*.7zip;*.rar;*.rvz;*.tar;*.tar.bz2;*.tar.gz;*.tgz;*.zip;*.zipx)|*.7z;*.7zip;*.rar;*.rvz;*.tar;*.tar.bz2;*.tar.gz;*.tgz;*.zip;*.zipx|All_Files(*)|* Source GeoJSON File or URL
+GUI NAMED_CONNECTION_ENCODED GCS_connector "safe.google-cloud-storage.Google Cloud Storage"%"Google Cloud Storage" Google Cloud Storage Account
+GUI FILENAME Lokal_GeoJSON_fil GeoJSON_Documents(*.json;*.geojson)|*.json;*.geojson|All_Files(*)|* Save to local file
+GUI WEB_SELECT_ENCODED GCS_bucket SERVICE:safe.google-cloud-storage.Google<space>Cloud<space>Storage%DEPENDENT_PARAMETERS:CREDENTIAL_SOURCE:__googlecloudstorageconnector_connection:_FME_PROJECT_ID%MODULE:fmepy_google_cloud_storage.resource_selector%KEYVALS:resource,buckets%PROMPTFORTITLE%SHOWID%SELECTION:ITEMS_ONLY%NO_SEARCH%SINGLEDEPTH%ITEM_ICON::/images/bucket.png GCS bucket for upload (without gs:// prefix)
+# ============================================================================
+USER_PARAMETERS eyJwYXJhbWV0ZXJzIjpbeyJjaG9pY2VTZXR0aW5ncyI6eyJjaG9pY2VTZXQiOiJ3ZWJDb25uZWN0aW9ucyIsInNlcnZpY2VzIjpbInNhZmUuZ29vZ2xlLWJpZ3F1ZXJ5Lkdvb2dsZSBCaWdRdWVyeSJdfSwibmFtZSI6IkJpZ1F1ZXJ5X2Nvbm5lY3Rpb24iLCJwcm9tcHQiOiJCaWdRdWVyeSBBY2NvdW50OiIsInJlcXVpcmVkIjp0cnVlLCJzdXBwb3J0ZWRWYWx1ZVR5cGVzIjpbImV4cHJlc3Npb24iLCJnbG9iYWxQYXJhbWV0ZXIiXSwidHlwZSI6ImRyb3Bkb3duIiwidmFsdWVUeXBlIjoic3RyaW5nIn0seyJlZGl0b3IiOiJwbGFpbnRleHQiLCJuYW1lIjoiQmlnUXVlcnlfcHJvamVjdCIsInByb21wdCI6InByb2plY3RfbmFtZToiLCJyZXF1aXJlZCI6ZmFsc2UsInNob3dFZGl0QnV0dG9uIjpmYWxzZSwidHlwZSI6InRleHQiLCJ2YWx1ZVR5cGUiOiJzdHJpbmcifSx7ImRlZmF1bHRWYWx1ZSI6IndvcmtzaG9wIiwiZWRpdG9yIjoicGxhaW50ZXh0IiwibmFtZSI6IkJpZ1F1ZXJ5X2RhdGFzZXQiLCJwcm9tcHQiOiJkYXRhc2V0X25hbWU6IiwicmVxdWlyZWQiOmZhbHNlLCJzdXBwb3J0ZWRWYWx1ZVR5cGVzIjpbImV4cHJlc3Npb24iLCJnbG9iYWxQYXJhbWV0ZXIiXSwidHlwZSI6InRleHQiLCJ2YWx1ZVR5cGUiOiJzdHJpbmcifSx7ImRlZmF1bHRWYWx1ZSI6ImtvbW11bmUiLCJlZGl0b3IiOiJwbGFpbnRleHQiLCJuYW1lIjoiQmlnUXVlcnlfdGFibGUiLCJwcm9tcHQiOiJ0YWJsZV9uYW1lIiwicmVxdWlyZWQiOmZhbHNlLCJzaG93RWRpdEJ1dHRvbiI6ZmFsc2UsInN1cHBvcnRlZFZhbHVlVHlwZXMiOlsiZXhwcmVzc2lvbiIsImdsb2JhbFBhcmFtZXRlciJdLCJ0eXBlIjoidGV4dCIsInZhbHVlVHlwZSI6InN0cmluZyJ9LHsiYWNjZXNzTW9kZSI6InJlYWQiLCJhbGxvd1VSTCI6dHJ1ZSwiZGVmYXVsdFZhbHVlIjoiaHR0cHM6Ly9naXRodWIuY29tL3NtaXN0YWQva29udmVydGVyLW5vcmdlc2thcnQtcHJvamVrc2pvbi9yZWxlYXNlcy9kb3dubG9hZC92MjAyMC9rb21tdW5lcl9rb21wcmltZXJ0Lmpzb24iLCJmaWx0ZXJzIjpbeyJkZXNjcmlwdGlvbiI6Ikdlb0pTT04gRG9jdW1lbnRzIiwiZmlsdGVyIjpbIiouanNvbiIsIiouZ2VvanNvbiJdfSx7ImRlc2NyaXB0aW9uIjoiQ29tcHJlc3NlZCBGaWxlcyIsImZpbHRlciI6WyIqLmJ6MiIsIiouZ3oiXX0seyJkZXNjcmlwdGlvbiI6IkFyY2hpdmUgRmlsZXMiLCJmaWx0ZXIiOlsiKi43eiIsIiouN3ppcCIsIioucmFyIiwiKi5ydnoiLCIqLnRhciIsIioudGFyLmJ6MiIsIioudGFyLmd6IiwiKi50Z3oiLCIqLnppcCIsIiouemlweCJdfSx7ImRlc2NyaXB0aW9uIjoiQWxsIEZpbGVzIiwiZmlsdGVyIjpbIioiXX1dLCJpdGVtc1RvU2VsZWN0IjoiZmlsZXMiLCJuYW1lIjoiU291cmNlX1VSTCIsInByb21wdCI6IlNvdXJjZSBHZW9KU09OIEZpbGUgb3IgVVJMIiwicmVxdWlyZWQiOnRydWUsInNlbGVjdE11bHRpcGxlIjp0cnVlLCJ0eXBlIjoiZmlsZSIsInZhbGlkYXRlRXhpc3RlbmNlIjpmYWxzZSwidmFsdWVUeXBlIjoic3RyaW5nIn0seyJjaG9pY2VTZXR0aW5ncyI6eyJjaG9pY2VTZXQiOiJ3ZWJDb25uZWN0aW9ucyIsInNlcnZpY2VzIjpbInNhZmUuZ29vZ2xlLWNsb3VkLXN0b3JhZ2UuR29vZ2xlIENsb3VkIFN0b3JhZ2UiLCJHb29nbGUgQ2xvdWQgU3RvcmFnZSJdfSwibmFtZSI6IkdDU19jb25uZWN0b3IiLCJwcm9tcHQiOiJHb29nbGUgQ2xvdWQgU3RvcmFnZSBBY2NvdW50IiwicmVxdWlyZWQiOnRydWUsInR5cGUiOiJkcm9wZG93biIsInZhbHVlVHlwZSI6InN0cmluZ0VuY29kZWQifSx7ImFjY2Vzc01vZGUiOiJ3cml0ZSIsImZpbHRlcnMiOlt7ImRlc2NyaXB0aW9uIjoiR2VvSlNPTiBEb2N1bWVudHMiLCJmaWx0ZXIiOlsiKi5qc29uIiwiKi5nZW9qc29uIl19LHsiZGVzY3JpcHRpb24iOiJBbGwgRmlsZXMiLCJmaWx0ZXIiOlsiKiJdfV0sIml0ZW1zVG9TZWxlY3QiOiJmaWxlcyIsIm5hbWUiOiJMb2thbF9HZW9KU09OX2ZpbCIsInByb21wdCI6IlNhdmUgdG8gbG9jYWwgZmlsZSIsInJlcXVpcmVkIjp0cnVlLCJzZWxlY3RNdWx0aXBsZSI6ZmFsc2UsInR5cGUiOiJmaWxlIiwidmFsaWRhdGVFeGlzdGVuY2UiOmZhbHNlLCJ2YWx1ZVR5cGUiOiJzdHJpbmcifSx7ImNob2ljZVNldHRpbmdzIjp7ImNob2ljZVNldCI6ImR5bmFtaWNTZXJ2aWNlVmFsdWVzIiwiY29uZmlndXJhdGlvbiI6W3sibmFtZSI6IkNSRURFTlRJQUxfU09VUkNFIiwidmFsdWUiOnsicGFyYW1ldGVyIjoiQ1JFREVOVElBTF9TT1VSQ0UifX0seyJuYW1lIjoiX19nb29nbGVjbG91ZHN0b3JhZ2Vjb25uZWN0b3JfY29ubmVjdGlvbiIsInZhbHVlIjp7InBhcmFtZXRlciI6Il9fZ29vZ2xlY2xvdWRzdG9yYWdlY29ubmVjdG9yX2Nvbm5lY3Rpb24ifX0seyJuYW1lIjoiX0ZNRV9QUk9KRUNUX0lEIiwidmFsdWUiOnsicGFyYW1ldGVyIjoiX0ZNRV9QUk9KRUNUX0lEIn19LHsibmFtZSI6InJlc291cmNlIiwidmFsdWUiOiJidWNrZXRzIn1dLCJpdGVtSWNvbiI6IjovaW1hZ2VzL2J1Y2tldC5wbmciLCJtb2R1bGUiOiJmbWVweV9nb29nbGVfY2xvdWRfc3RvcmFnZS5yZXNvdXJjZV9zZWxlY3RvciIsInNlbGVjdGlvbiI6WyJvYmplY3RzIl0sInNlcnZpY2VOYW1lIjoic2FmZS5nb29nbGUtY2xvdWQtc3RvcmFnZS5Hb29nbGUgQ2xvdWQgU3RvcmFnZSIsInNob3dTZWFyY2giOmZhbHNlLCJ1c2VQcm9tcHRBc1RpdGxlIjp0cnVlfSwibmFtZSI6IkdDU19idWNrZXQiLCJwcm9tcHQiOiJHQ1MgYnVja2V0IGZvciB1cGxvYWQgKHdpdGhvdXQgZ3M6Ly8gcHJlZml4KSIsInJlcXVpcmVkIjp0cnVlLCJ0eXBlIjoibGlzdGJveCIsInZhbHVlVHlwZSI6InN0cmluZ0VuY29kZWQifV19
+# ============================================================================
+INCLUDE [ if {{$(BigQuery_connection)} == {}} { puts_real {Parameter 'BigQuery_connection' must be given a value.}; exit 1; }; ]
+INCLUDE [ if {{$(Source_URL)} == {}} { puts_real {Parameter 'Source_URL' must be given a value.}; exit 1; }; ]
+INCLUDE [ if {{$(GCS_connector)} == {}} { puts_real {Parameter 'GCS_connector' must be given a value.}; exit 1; }; ]
+INCLUDE [ if {{$(Lokal_GeoJSON_fil)} == {}} { puts_real {Parameter 'Lokal_GeoJSON_fil' must be given a value.}; exit 1; }; ]
+INCLUDE [ if {{$(GCS_bucket)} == {}} { puts_real {Parameter 'GCS_bucket' must be given a value.}; exit 1; }; ]
+#! START_HEADER
+#! START_WB_HEADER
+READER_TYPE MULTI_READER
+MULTI_READER_TYPE{0} GEOJSON
+MULTI_READER_KEYWORD{0} GEOJSON_1
+MULTI_READER_GEN_DIRECTIVES{0} CLIP_TO_ENVELOPE,NO,FLATTEN_MODE,ALL_LEVELS,USE_SEARCH_ENVELOPE,NO,SEARCH_ENVELOPE_COORDINATE_SYSTEM,,SEARCH_ENVELOPE_MAXY,0,GEOJSON_EXPOSE_FORMAT_ATTRS,,USE_BASENAME_AS_DEFAULT_FEATURE_TYPE,Yes,SEARCH_ENVELOPE_MINY,0,_MERGE_SCHEMAS,YES,EXPOSE_ATTRS_GROUP,,SEARCH_ENVELOPE_MINX,0,SEARCH_ENVELOPE_MAXX,0
+WRITER_TYPE NULL
+WRITER_KEYWORD NULL_DEST
+NULL_DEST_DATASET null
+#! END_WB_HEADER
+#! START_WB_HEADER
+MACRO WB_KEYWORD "GEOJSON_1"
+#! END_WB_HEADER
+#! START_SOURCE_HEADER GEOJSON GEOJSON_1
+# The dataset this mapping file was generated from was:
+#! END_SOURCE_HEADER
+#! START_WB_HEADER
+DEFAULT_MACRO SourceDataset
+INCLUDE [ if {{$(SourceDataset)} != ""} {                        \
+ puts {DEFAULT_MACRO SourceDataset_GEOJSON_1 $(SourceDataset)}     \
+ } ]
+#! END_WB_HEADER
+#! START_SOURCE_HEADER GEOJSON GEOJSON_1
+DEFAULT_MACRO SourceDataset_GEOJSON_1 $(Source_URL)
+GUI FILE_OR_URL SourceDataset_GEOJSON_1 GeoJSON_Documents(*.json;*.geojson)|*.json;*.geojson|All_Files|* Source GeoJSON File or URL:
+DEFAULT_MACRO GEOJSON_IN_FLATTEN_MODE_GEOJSON_1 ALL_LEVELS
+GEOJSON_1_FLATTEN_MODE "$(GEOJSON_IN_FLATTEN_MODE_GEOJSON_1)"
+DEFAULT_MACRO GEOJSON_IN_EXPOSE_ATTRS_GROUP_GEOJSON_1
+GEOJSON_1_EXPOSE_ATTRS_GROUP "$(GEOJSON_IN_EXPOSE_ATTRS_GROUP_GEOJSON_1)"
+DEFAULT_MACRO GEOJSON_IN_USE_BASENAME_AS_DEFAULT_FEATURE_TYPE_GEOJSON_1 Yes
+GEOJSON_1_USE_BASENAME_AS_DEFAULT_FEATURE_TYPE "$(GEOJSON_IN_USE_BASENAME_AS_DEFAULT_FEATURE_TYPE_GEOJSON_1)"
+# Include this file in source setting section to add external search envelope processing
+# Zero as a default means we don't do any search -- this makes workbench happier
+DEFAULT_MACRO GEOJSON_IN_USE_SEARCH_ENVELOPE_GEOJSON_1 NO
+GEOJSON_1_USE_SEARCH_ENVELOPE "$(GEOJSON_IN_USE_SEARCH_ENVELOPE_GEOJSON_1)"
+GUI ACTIVEDISCLOSUREGROUP GEOJSON_IN_USE_SEARCH_ENVELOPE_GEOJSON_1 GEOJSON_IN_SEARCH_ENVELOPE_MINX_GEOJSON_1%GEOJSON_IN_SEARCH_ENVELOPE_MINY_GEOJSON_1%GEOJSON_IN_SEARCH_ENVELOPE_MAXX_GEOJSON_1%GEOJSON_IN_SEARCH_ENVELOPE_MAXY_GEOJSON_1%GEOJSON_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_GEOJSON_1%GEOJSON_IN_CLIP_TO_ENVELOPE_GEOJSON_1%GEOJSON_IN_SEARCH_METHOD%GEOJSON_IN_SEARCH_METHOD_FILTER%GEOJSON_IN_SEARCH_ORDER%GEOJSON_IN_SEARCH_FEATURE%GEOJSON_IN_DUMMY_SEARCH_ENVELOPE_PARAMETER Use Search Envelope
+# ===========================================================================
+GUI LOOKUP GEOJSON_IN_SEARCH_ENVELOPE_MINX_GEOJSON_1 <Unused>,0 
+DEFAULT_MACRO GEOJSON_IN_SEARCH_ENVELOPE_MINX_GEOJSON_1 0
+GEOJSON_1_SEARCH_ENVELOPE "$(GEOJSON_IN_SEARCH_ENVELOPE_MINX_GEOJSON_1)"
+GUI OPTIONAL FLOAT GEOJSON_IN_SEARCH_ENVELOPE_MINX_GEOJSON_1 Minimum X:
+# ===========================================================================
+GUI LOOKUP GEOJSON_IN_SEARCH_ENVELOPE_MINY_GEOJSON_1 <Unused>,0 
+DEFAULT_MACRO GEOJSON_IN_SEARCH_ENVELOPE_MINY_GEOJSON_1 0
+GEOJSON_1_SEARCH_ENVELOPE "$(GEOJSON_IN_SEARCH_ENVELOPE_MINY_GEOJSON_1)"
+GUI OPTIONAL FLOAT GEOJSON_IN_SEARCH_ENVELOPE_MINY_GEOJSON_1 Minimum Y:
+# ===========================================================================
+GUI LOOKUP GEOJSON_IN_SEARCH_ENVELOPE_MAXX_GEOJSON_1 <Unused>,0 
+DEFAULT_MACRO GEOJSON_IN_SEARCH_ENVELOPE_MAXX_GEOJSON_1 0
+GEOJSON_1_SEARCH_ENVELOPE "$(GEOJSON_IN_SEARCH_ENVELOPE_MAXX_GEOJSON_1)"
+GUI OPTIONAL FLOAT GEOJSON_IN_SEARCH_ENVELOPE_MAXX_GEOJSON_1 Maximum X:
+# ===========================================================================
+GUI LOOKUP GEOJSON_IN_SEARCH_ENVELOPE_MAXY_GEOJSON_1 <Unused>,0 
+DEFAULT_MACRO GEOJSON_IN_SEARCH_ENVELOPE_MAXY_GEOJSON_1 0
+GEOJSON_1_SEARCH_ENVELOPE "$(GEOJSON_IN_SEARCH_ENVELOPE_MAXY_GEOJSON_1)"
+GUI OPTIONAL FLOAT GEOJSON_IN_SEARCH_ENVELOPE_MAXY_GEOJSON_1 Maximum Y:
+# ===========================================================================
+GUI LOOKUP GEOJSON_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_GEOJSON_1 <Unused>, 
+DEFAULT_MACRO GEOJSON_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_GEOJSON_1 
+GEOJSON_1_SEARCH_ENVELOPE "$(GEOJSON_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_GEOJSON_1)"
+GUI OPTIONAL COORDSYS GEOJSON_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_GEOJSON_1 Search Envelope Coordinate System:
+# ===========================================================================
+# BUG18999: We now have a soft clip to fall back on like native spatial index
+# thus we are reintroducing the clip to envelop as an option for users.
+# Defualt to soft clip as per the existing database readers we are emulating
+GUI LOOKUP GEOJSON_IN_CLIP_TO_ENVELOPE_GEOJSON_1 <Unused>,NO 
+DEFAULT_MACRO GEOJSON_IN_CLIP_TO_ENVELOPE_GEOJSON_1 NO
+GEOJSON_1_CLIP_TO_ENVELOPE "$(GEOJSON_IN_CLIP_TO_ENVELOPE_GEOJSON_1)"
+GUI OPTIONAL CHECKBOX GEOJSON_IN_CLIP_TO_ENVELOPE_GEOJSON_1 YES%NO Clip to Search Envelope
+# ===========================================================================
+DEFAULT_MACRO GEOJSON_IN_NETWORK_AUTHENTICATION_GEOJSON_1 
+GEOJSON_1_NETWORK_AUTHENTICATION "$(GEOJSON_IN_NETWORK_AUTHENTICATION_GEOJSON_1)"
+GUI OPTIONAL AUTHENTICATOR GEOJSON_IN_NETWORK_AUTHENTICATION_GEOJSON_1 CONTAINER%GROUP%CONTAINER_TITLE%"Network Authentication"%PROMPT_TYPE%NETWORK Network Authentication
+# ============================================================================
+DEFAULT_MACRO GEOJSON_IN_ATTRIBUTE_READING_GEOJSON_1 ALL
+GEOJSON_1_ATTRIBUTE_READING "$(GEOJSON_IN_ATTRIBUTE_READING_GEOJSON_1)"
+# ============================================================================
+GEOJSON_1_GENERATE_FME_BUILD_NUM 21313
+GEOJSON_1_DATASET "$(SourceDataset_GEOJSON_1)"
+#! END_SOURCE_HEADER
+#! START_WB_HEADER
+#! END_WB_HEADER
+#! END_HEADER
+
+LOG_FILENAME "$(FME_MF_DIR)bq_write_oppgave.log"
+LOG_APPEND NO
+LOG_FILTER_MASK -1
+LOG_MAX_FEATURES 200
+LOG_MAX_RECORDED_FEATURES 200
+FME_REPROJECTION_ENGINE ESRI
+FME_IMPLICIT_CSMAP_REPROJECTION_MODE Auto
+FME_GEOMETRY_HANDLING Enhanced
+FME_STROKE_MAX_DEVIATION 0
+FME_NAMES_ENCODING windows-1252
+MAPPING_FILE_ID bq_write
+DEFAULT_MACRO DATASET_KEYWORD_GEOJSON_1 GEOJSON_1
+# -------------------------------------------------------------------------
+
+GEOJSON_1_READER_META_ATTRIBUTES fme_feature_type
+
+# -------------------------------------------------------------------------
+
+GEOJSON_1_COORDINATE_SYSTEM LL84
+MULTI_READER_CONTINUE_ON_READER_FAILURE No
+
+# -------------------------------------------------------------------------
+
+MACRO WORKSPACE_NAME bq_write_oppgave
+MACRO FME_VIEWER_APP fmedatainspector
+# -------------------------------------------------------------------------
+GEOJSON_1_DEF kommuner_komprimert   kommunenummer                string   objtype                      string   lokalid                      string   oppdateringsdato             string   datauttaksdato               string   versjonid                    string   opphav                       string   samiskforvaltningsomrade     boolean   datafangstdato               string   navnerom                     string   navn{}.rekkefolge            string   navn{}.sprak                 string   navn{}.navn                  string
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * RoutingFactory   FACTORY_NAME "Router and Unexpected Input Remover"   COMMAND_PARM_EVALUATION SINGLE_PASS   MULTI_READER_KEYWORD $(DATASET_KEYWORD_GEOJSON_1)   INPUT FEATURE_TYPE *    ROUTE GEOJSON GEOJSON_1::kommuner_komprimert multi_reader_keyword,$(DATASET_KEYWORD_GEOJSON_1) TO FME_GENERIC ::kommuner_komprimert ALIAS_GEOMETRY    MERGE_INPUT Yes   OUTPUT ROUTED FEATURE_TYPE *
+GEOJSON_1_MERGE_DEF GEOJSON_1::kommuner_komprimert EXACT kommuner_komprimert
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "kommuner_komprimert_GEOJSON_1 Splitter"    INPUT FEATURE_TYPE kommuner_komprimert    OUTPUT FEATURE_TYPE kommuner_komprimert_GEOJSON_1
+DEFAULT_MACRO WB_CURRENT_CONTEXT
+# -------------------------------------------------------------------------
+Tcl2 proc ListIndexer:_0_indexer {index numElements prefix suffix} {    if {$index < 0 } {       set index [expr $numElements + $index];    };    regsub \"{}\" {navn{}} \"{$index}\" listWithIndex;    regsub \"{}\" {navn{}} {} listBase;    set complexListExp "$listWithIndex\.";    set prefixLength [expr [string length $complexListExp]-1];    set prefix [FME_DecodeText $prefix];    set suffix [FME_DecodeText $suffix];    foreach attr [FME_AttributeNames] {      set newAttr {};      if {$attr == $listWithIndex} {        set newAttr $listBase;      } elseif {[string first $complexListExp $attr] == 0} {        set newAttr [string replace $attr 0 $prefixLength];      };      if {$newAttr != {}} {          if {$prefix != {} } {            set newAttr $prefix$newAttr;          };          if {$suffix != {} } {            set newAttr $newAttr$suffix;          };          if {[string first {fme_} $newAttr] != 0} {              set first [string first {fme_} $newAttr];              lappend attrsToCopy $newAttr $attr;          };      };    };    if {[info exists attrsToCopy] && [llength $attrsToCopy] > 0} {      eval FME_Execute CopyAttributes $attrsToCopy;    }; }
+FACTORY_DEF {*} TestFactory    FACTORY_NAME { ListIndexer:_0_IntTester }    INPUT  FEATURE_TYPE kommuner_komprimert_GEOJSON_1    TEST { "0" TYPE INT ENCODED }    FEATURE_TABLE_SHIM_SUPPORT Yes    PRESERVE_FEATURE_ORDER PER_OUTPUT_PORT    OUTPUT { PASSED FEATURE_TYPE __toOutput__ }
+FACTORY_DEF {*} TestFactory    FACTORY_NAME { ListIndexer:_0_ListIndexer }    INPUT FEATURE_TYPE __toOutput__    TEST { "0" >= 0 }    FEATURE_TABLE_SHIM_SUPPORT Yes    OUTPUT PASSED FEATURE_TYPE ListIndexer:_0_OUTPUT @Tcl2("ListIndexer:_0_indexer 0 0 {} {}")    OUTPUT FAILED FEATURE_TYPE ListIndexer:_0_OUTPUT @Tcl2("ListIndexer:_0_indexer 0 @NumElements(navn{}) {} {}")
+# -------------------------------------------------------------------------
+FACTORY_DEF {*} AttributeKeeperFactory    FACTORY_NAME { AttributeKeeper }    INPUT  FEATURE_TYPE ListIndexer:_0_OUTPUT    KEEP_ATTRS { datafangstdato,datauttaksdato,kommunenummer,lokalid,navn,navnerom,objtype,oppdateringsdato,opphav,samiskforvaltningsomrade }    KEEP_LISTS {  }    KEEP_FME_ATTRIBUTES Yes    BUILD_FEATURE_TABLES { NO }    OUTPUT_ON_ATTRIBUTE_CHANGE { <Unused> }    OUTPUT { OUTPUT FEATURE_TYPE AttributeKeeper_OUTPUT        }
+# -------------------------------------------------------------------------
+INCLUDE [    puts {DEFAULT_MACRO FeatureWriterDataset_FeatureWriter @EvaluateExpression(FDIV,STRING_ENCODED,$(Lokal_GeoJSON_fil$encode),FeatureWriter)}; ]
+FACTORY_DEF {*} WriterFactory    FLUSH_WHEN_GROUPS_CHANGE { <Unused> }    FACTORY_NAME { FeatureWriter }    WRITER_TYPE { GEOJSON }    WRITER_DATASET { "$(FeatureWriterDataset_FeatureWriter)" }    WRITER_SETTINGS { "RUNTIME_MACROS,WRITER_CHARSET<comma>UTF-8<comma>WRITE_BOM<comma>No<comma>FILE_STRUCTURE<comma>SINGLE_FEATURE_COLLECTION<comma>PRETTY_PRINT<comma>YES<comma>INDENT_SIZE<comma>0<comma>MAX_COORDINATE_PRECISION<comma>10<comma>COUNTER_CLOCKWISE_AREAS<comma>Yes<comma>WGS84_REPROJECTION<comma>Yes<comma>JSONP_FUNC_NAME<comma><comma>DESTINATION_DATASETTYPE_VALIDATION<comma>Yes,METAFILE,GEOJSON" }    WRITER_METAFILE { "ATTRIBUTE_CASE,ANY,ATTRIBUTE_INVALID_CHARS,,ATTRIBUTE_LENGTH,600,ATTR_TYPE_MAP,string<comma>fme_buffer<comma>string<comma>fme_binarybuffer<comma>string<comma>fme_xml<comma>string<comma>fme_varchar<openparen>width<closeparen><comma>string<comma>fme_varbinary<openparen>width<closeparen><comma>boolean<comma>fme_boolean<comma>string<comma>fme_char<openparen>width<closeparen><comma>string<comma>fme_binary<openparen>width<closeparen><comma>string<comma>fme_datetime<comma>string<comma>fme_time<comma>string<comma>fme_date<comma>float<comma>fme_real64<comma>float<comma>fme_real32<comma>int<comma>fme_int64<comma>string<comma>fme_uint64<comma>int<comma>fme_int32<comma>int<comma>fme_uint32<comma>int<comma>fme_int16<comma>int<comma>fme_uint16<comma>int<comma>fme_int8<comma>int<comma>fme_uint8<comma>string<comma><quote>fme_decimal<openparen>width<comma>decimal<closeparen><quote><comma>json<comma>fme_json,DEST_ILLEGAL_ATTR_LIST,,FEATURE_TYPE_CASE,ANY,FEATURE_TYPE_INVALID_CHARS,,FEATURE_TYPE_LENGTH,0,FEATURE_TYPE_LENGTH_INCLUDES_PREFIX,false,FEATURE_TYPE_RESERVED_WORDS,,FORMAT_METAFILE,$(FME_HOME_ENCODED)metafile<backslash>GEOJSON.fmf,FORMAT_NAME,GEOJSON,GEOM_MAP,json_point<comma>fme_point<comma>json_line<comma>fme_line<comma>json_polygon<comma>fme_polygon<comma>json_text<comma>fme_text<comma>json_ellipse<comma>fme_ellipse<comma>json_arc<comma>fme_arc<comma>json_rectangle<comma>fme_rectangle<comma>json_rounded_rectangle<comma>fme_rounded_rectangle<comma>json_raster<comma>fme_raster<comma>json_no_geom<comma>fme_no_geom<comma>json_collection<comma>fme_collection<comma>json_line<comma>fme_surface<comma>json_line<comma>fme_solid<comma>json_polygon<comma>fme_point_cloud<comma>json_polygon<comma>fme_voxel_grid<comma>json_no_geom<comma>fme_feature_table,READER_ATTR_INDEX_TYPES,,READER_USES_DEF,yes,SOURCE,no,SUPPORTS_FEAT_TYPE_FANOUT,yes,SUPPORTS_MULTI_GEOM,yes,WORKBENCH_CANNED_SCHEMA,,WRITER,GEOJSON,WRITER_ATTR_INDEX_TYPES,,WRITER_DEFLINE_PARMS,,WRITER_DEF_LINE_TEMPLATE,<opencurly>FME_GEN_GROUP_NAME<closecurly>,WRITER_FORMAT_PARAMETER,MIME_TYPE<comma><quote>application<solidus>geo+json<space>ADD_DISPOSITION<quote><comma>DATASET_NAME<comma><quote>json<space>file<quote><comma>READER_DATASET_HINT<comma><quote>Select<space>the<space>GeoJSON<space>file<openparen>s<closeparen><space>or<space>type<space>the<space>GeoJSON<space>URL<quote><comma>WRITER_DATASET_HINT<comma><quote>Specify<space>a<space>name<space>for<space>the<space>GeoJSON<space>file<quote>,WRITER_HAS_DEFLINE_ATTRS,yes,WRITER_USES_DEF,yes" }    WRITER_FEATURE_TYPES { "kommuner_komprimert:kommuner_komprimert,ftp_feature_type_name,kommuner_komprimert,ftp_writer,GEOJSON,ftp_dynamic_schema,no,ftp_dynamic_feature_type_name_type,DYN_SCHEMA_PROP_AUTO,ftp_dynamic_geometry_type,DYN_SCHEMA_PROP_AUTO,ftp_dynamic_schema_def_name_type,DYN_SCHEMA_PROP_AUTO,ftp_dynamic_schema_sources,<lt>lt<gt>Unused<lt>gt<gt>,ftp_attribute_source,0,ftp_user_attributes,kommunenummer<comma>string<comma>objtype<comma>string<comma>lokalid<comma>string<comma>oppdateringsdato<comma>string<comma>datauttaksdato<comma>string<comma>opphav<comma>string<comma>samiskforvaltningsomrade<comma>boolean<comma>datafangstdato<comma>string<comma>navnerom<comma>string<comma>navn<comma>string,ftp_user_attribute_values,<comma><comma><comma><comma><comma><comma><comma><comma><comma>" }    WRITER_PARAMS { "INDENT_SIZE,0,DESTINATION_DATASETTYPE_VALIDATION,Yes,FILE_STRUCTURE,SINGLE_FEATURE_COLLECTION,MAX_COORDINATE_PRECISION,10,WGS84_REPROJECTION,Yes,WRITER_CHARSET,UTF-8,WRITE_BOM,No,COUNTER_CLOCKWISE_AREAS,Yes,PRETTY_PRINT,YES" }    DATASET_ATTR { "_dataset" }    FEATURE_TYPE_LIST_ATTR { "_feature_type" }    TOTAL_FEATURES_WRITTEN_ATTR { "_total_features_written" }    OUTPUT_PORTS { kommuner_komprimert kommuner_komprimert }    INPUT kommuner_komprimert FEATURE_TYPE AttributeKeeper_OUTPUT  @FeatureType(ENCODED,kommuner_komprimert)    OUTPUT { SUMMARY FEATURE_TYPE FeatureWriter_SUMMARY        }
+# -------------------------------------------------------------------------
+FACTORY_DEF {*} TeeFactory    FACTORY_NAME { GoogleCloudStorageConnector_CATCHER }    INPUT  FEATURE_TYPE FeatureWriter_SUMMARY    OUTPUT { FEATURE_TYPE GoogleCloudStorageConnector_INITIATOR }    OUTPUT { FEATURE_TYPE GoogleCloudStorageConnector       @RenameAttributes(FME_STRICT,___fme_rejection_code___,fme_rejection_code)           CREDENTIAL_SOURCE WEBCONN     __googlecloudstorageconnector_connection "$(GCS_connector)"     _FME_PROJECT_ID "$(BigQuery_project$encode)"     OPERATION_TYPE Upload     _FME_SOURCE_TYPE File     _FME_SOURCE_FILE "@EvaluateExpression(FDIV,STRING_ENCODED,$(Lokal_GeoJSON_fil$encode),GoogleCloudStorageConnector)"     _FME_SOURCE_FOLDER <Unused>     _FME_INCLUDE_SUBFOLDERS <Unused>     _FME_CONTENTS_ONLY <Unused>     _FME_DATA_TO_UPLOAD <Unused>     _FME_BUCKET "@EvaluateExpression(FDIV,STRING_ENCODED,$(GCS_bucket),GoogleCloudStorageConnector)"     _FME_UPLOAD_DESTINATION_PATH <solidus>     _FME_UPLOAD_ATTR_FILENAME <Unused>     _FME_HANDLE_EXISTING_FILE Overwrite     _FME_GCS_ACL private     _FME_CUSTOM_HEADERS ""     _FME_ATTRIBUTES_TO_ADD "_url _name _full_path _bucket"  }
+FACTORY_DEF {*} PythonFactory    FACTORY_NAME { GoogleCloudStorageConnector_CALLER }    INPUT { FEATURE_TYPE GoogleCloudStorageConnector }    PYTHON_NAMESPACE FMEOBJECTS    SYMBOL_NAME fmepy_google_cloud_storage.connector.GoogleCloudStorageConnector    OUTPUT { PYOUTPUT FEATURE_TYPE GoogleCloudStorageConnector_PROCESSED }
+FACTORY_DEF {*} TestFactory    FACTORY_NAME { GoogleCloudStorageConnector_ROUTER }    INPUT { FEATURE_TYPE GoogleCloudStorageConnector_PROCESSED }    TEST &fme_rejection_code == ""    OUTPUT { PASSED FEATURE_TYPE GoogleCloudStorageConnector_OUTPUT         @RenameAttributes(FME_STRICT,fme_rejection_code,___fme_rejection_code___)          }    OUTPUT { FAILED FEATURE_TYPE GoogleCloudStorageConnector_<REJECTED>       @RemoveAttributes(___fme_rejection_code___)        }
+FACTORY_DEF * TeeFactory   FACTORY_NAME "GoogleCloudStorageConnector OUTPUT Transformer Output Nuker"   INPUT FEATURE_TYPE GoogleCloudStorageConnector_OUTPUT
+FACTORY_DEF * TeeFactory   FACTORY_NAME "GoogleCloudStorageConnector INITIATOR Transformer Output Nuker"   INPUT FEATURE_TYPE GoogleCloudStorageConnector_INITIATOR
+DEFAULT_MACRO _WB_BYPASS_TERMINATION No
+FACTORY_DEF * TeeFactory FACTORY_NAME GoogleCloudStorageConnector_<Rejected> INPUT FEATURE_TYPE GoogleCloudStorageConnector_<REJECTED>  OUTPUT FAILED FEATURE_TYPE * @Abort(ENCODED, GoogleCloudStorageConnector<space>output<space>a<space><lt>Rejected<gt><space>feature.<space><space>To<space>continue<space>translation<space>when<space>features<space>are<space>rejected<comma><space>change<space><apos>Workspace<space>Parameters<apos><space><gt><space>Translation<space><gt><space><apos>Rejected<space>Feature<space>Handling<apos><space>to<space><apos>Continue<space>Translation<apos>)
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * RoutingFactory FACTORY_NAME "Destination Feature Type Routing Correlator"   COMMAND_PARM_EVALUATION SINGLE_PASS   INPUT FEATURE_TYPE *   FEATURE_TYPE_ATTRIBUTE __wb_out_feat_type__   OUTPUT ROUTED FEATURE_TYPE *    OUTPUT NOT_ROUTED FEATURE_TYPE __nuke_me__ @Tcl2("FME_StatMessage 818059 [FME_GetAttribute fme_template_feature_type] 818060 818061 fme_warn")
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory   FACTORY_NAME "Final Output Nuker"   INPUT FEATURE_TYPE __nuke_me__
+
